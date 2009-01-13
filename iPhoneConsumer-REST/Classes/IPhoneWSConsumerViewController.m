@@ -16,6 +16,8 @@
 
 
 - (IBAction) addContestant:(id) sender {	
+	[self textFieldShouldReturn:txtContestantName];
+	
 	NSString* statusText;
 	
 	if([txtContestantName.text length] == 0) {
@@ -24,7 +26,7 @@
 	else {
 		statusText = [[NSString alloc] initWithFormat:@"Contestant added: %@!",txtContestantName.text];
 		[self.pickerData addObject:txtContestantName.text];
-		[self.pckContestants setNeedsDisplay];
+		[self.pckContestants reloadComponent:0];
 	}
 	lblStatus.text = statusText;
 	
@@ -49,45 +51,63 @@
 	
 	lblStatus.text = statusText;
 	
+	//Find which row in the data array this name is
+	int rowForWinningContestant = 0;
+	NSString *currentString = nil;
+	for (rowForWinningContestant = 0; rowForWinningContestant < [pickerData count]; rowForWinningContestant++) {
+		currentString = [pickerData objectAtIndex:rowForWinningContestant];
+		if ([currentString isEqualTo:winnerName]) {
+			[pckContestants selectRow:rowForWinningContestant inComponent:0 animated:YES];
+		}
+	}
+	
 	[winnerName release];
 	[webservice release];
 }
 
+	
 
-/////
-		
-		
+/**
+ * Release the keyboard display (hide it)
+ */
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField 
 {
-	NSLog(@"%@ textFieldShouldReturn", [self class]);
 	[theTextField resignFirstResponder];
-	// do stuff with the text
-	NSLog(@"text = %@", [theTextField text]);
 	return YES;
 }
 		
-		
-///////////
 
+/**
+ * Load the initial empty array for contestants in the pickerView
+ */
 - (void)viewDidLoad 
 {
-	NSMutableArray  *array  = [[NSMutableArray alloc] initWithObjects: @"Luke",
-						@"Leia", @"Han", nil];
+	//NSMutableArray  *array  = [[NSMutableArray alloc] initWithObjects: @"Luke", @"Leia", @"Han", nil];
+	NSMutableArray  *array  = [[NSMutableArray alloc] initWithObjects: nil];
 	self.pickerData  = array;
 	[array release];
 }
 
+/**
+ * How many columns. Just 1 at this time.
+ */
 - (NSInteger)numberOfComponentsInPickerView: (UIPickerView *)pickerView
 {
 	return 1;
 }
 
+/**
+ * How many rows in the pickerview? As many as are in the data backing store.
+ */
 - (NSInteger)pickerView: (UIPickerView *)pickerView
-numberOfRowsInComponent: (NSInteger)component 
+			numberOfRowsInComponent: (NSInteger)component 
 {
 	return [pickerData count];
 }
 
+/**
+ * Get the title for a row in the pickerview
+ */
 - (NSString *)pickerView:(UIPickerView *)pickerView
 			 titleForRow: (NSInteger)row
 			forComponent: (NSInteger)component

@@ -23,6 +23,8 @@
 - (IBAction) addContestant:(id) sender;
 - (IBAction) pickWinner:(id) sender;
 
+- (BOOL)textFieldShouldReturn:(UITextField *)theTextField;
+
 //- (NSString*)pickWinnerWS;
 @end
 
