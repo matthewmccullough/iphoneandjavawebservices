@@ -248,7 +248,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew McCullough";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew McCullough";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -257,6 +257,7 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = IPhoneWSConsumer;
 				PROVISIONING_PROFILE = DefaultProfileUuid;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "43CE3304-E0FC-462F-B20C-B3F2E56932EA";
 			};
 			name = "Debug on Phone";
 		};

@@ -15,7 +15,7 @@
 	
 - (void)initiateRESTAddName:(NSString*) contestantName
 {
-	NSString *baseURLString = @"http://localhost:9090/drawing/";
+	NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 	NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@", baseURLString, contestantName];
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -43,7 +43,7 @@
 
 - (NSString*)initiateRESTPickWinner
 {
-	NSString *baseURLString = @"http://127.0.0.1:9090/drawing/";
+	NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 	//NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@", baseURLString, queryTerm];
 	NSURL *url = [[NSURL alloc] initWithString:baseURLString];
 	NSLog(@"Pick Winner URL: %d", *url);

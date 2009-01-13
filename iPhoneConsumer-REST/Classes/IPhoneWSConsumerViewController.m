@@ -11,22 +11,20 @@
 
 @implementation IPhoneWSConsumerViewController
 
-@synthesize txtContestantName,lblStatus;
+@synthesize txtContestantName,lblStatus,pckContestants;
+@synthesize pickerData;
 
 
-- (IBAction) addContestant:(id) sender {
+- (IBAction) addContestant:(id) sender {	
 	NSString* statusText;
 	
 	if([txtContestantName.text length] == 0) {
 		statusText = @"No status";
 	}
 	else {
-		//Release the old before assigning the new
-		//if (statusText != nil) {
-//			[statusText release];
-//		}
-		
 		statusText = [[NSString alloc] initWithFormat:@"Contestant added: %@!",txtContestantName.text];
+		[self.pickerData addObject:txtContestantName.text];
+		[self.pckContestants setNeedsDisplay];
 	}
 	lblStatus.text = statusText;
 	
@@ -46,10 +44,7 @@
 	//Call WS
 	AIWSObject *webservice = [[AIWSObject alloc] init];
 	winnerName = [webservice initiateRESTPickWinner];
-	
-	//Convert NSData to NSString
-	//NSString *sourceSt = [[NSString alloc] initWithBytes:[downloadedData bytes] length:[downloadedData length] encoding:NSUTF8StringEncoding];
-		
+
 	statusText = [@"Winner is: " stringByAppendingString: winnerName];
 	
 	lblStatus.text = statusText;
@@ -59,5 +54,45 @@
 }
 
 
+/////
+		
+		
+- (BOOL)textFieldShouldReturn:(UITextField *)theTextField 
+{
+	NSLog(@"%@ textFieldShouldReturn", [self class]);
+	[theTextField resignFirstResponder];
+	// do stuff with the text
+	NSLog(@"text = %@", [theTextField text]);
+	return YES;
+}
+		
+		
+///////////
+
+- (void)viewDidLoad 
+{
+	NSMutableArray  *array  = [[NSMutableArray alloc] initWithObjects: @"Luke",
+						@"Leia", @"Han", nil];
+	self.pickerData  = array;
+	[array release];
+}
+
+- (NSInteger)numberOfComponentsInPickerView: (UIPickerView *)pickerView
+{
+	return 1;
+}
+
+- (NSInteger)pickerView: (UIPickerView *)pickerView
+numberOfRowsInComponent: (NSInteger)component 
+{
+	return [pickerData count];
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView
+			 titleForRow: (NSInteger)row
+			forComponent: (NSInteger)component
+{
+	return [pickerData objectAtIndex: row];
+}
 
 @end

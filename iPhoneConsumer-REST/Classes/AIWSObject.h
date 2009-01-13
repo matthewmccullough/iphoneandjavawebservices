@@ -1,7 +1,7 @@
 @interface AIWSObject : NSObject {
 }
 
-- (NSMutableData*)initiateSOAPConnection:(NSString*) name;
+//- (NSMutableData*)initiateSOAPConnection:(NSString*) name;
 
 - (void)initiateRESTAddName:(NSString*) contestantName;
 
