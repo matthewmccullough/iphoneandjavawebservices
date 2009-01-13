@@ -21,19 +21,35 @@
 	NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:url];
 	[req setHTTPMethod:@"PUT"];
 	
-	NSHTTPURLResponse* response = nil;  
-	NSError* error = nil;  
-	NSData *responseData = [NSURLConnection sendSynchronousRequest:req   
-												 returningResponse:&response  
-															 error:&error];  
-	NSString *result = [[NSString alloc] initWithData:responseData 
-											 encoding:NSUTF8StringEncoding];
-	NSLog(@"Response Code: %d", [response statusCode]);
-	NSLog(@"Content-Type: %@", [[response allHeaderFields] 
-								objectForKey:@"Content-Type"]);
-	if ([response statusCode] >= 200 && [response statusCode] < 300)
-		NSLog(@"Result: %@", result);
 	
+	BOOL success = false;
+	int retryCount = 0;
+	NSString *result = nil;
+	
+	while (success == false && retryCount <=3) {
+		NSHTTPURLResponse* response = nil;  
+		NSError* error = nil;  
+		NSData *responseData = [NSURLConnection sendSynchronousRequest:req   
+													 returningResponse:&response  
+																 error:&error];  
+		result = [[NSString alloc] initWithData:responseData 
+									   encoding:NSUTF8StringEncoding];
+		NSLog(@"Response Code: %d", [response statusCode]);
+		NSLog(@"Content-Type: %@", [[response allHeaderFields] 
+									objectForKey:@"Content-Type"]);
+		if ([response statusCode] >= 200 && [response statusCode] < 300) {
+			NSLog(@"Result: %@", result);
+			success = true;
+		}
+		if ([response statusCode] == 204) {
+			//Error - Null Payload
+			[result release];
+			success = false;
+		}
+		
+		retryCount++;
+	}
+		
 	[urlString release];
 	[url release];
 	[req release];
@@ -51,18 +67,33 @@
 	[req setHTTPMethod:@"GET"];
 	NSLog(@"Pick Winner request: %d", *req);
 	
-	NSHTTPURLResponse* response = nil;  
-	NSError* error = nil;  
-	NSData *responseData = [NSURLConnection sendSynchronousRequest:req   
-                                             returningResponse:&response  
-                                                         error:&error];  
-	NSString *result = [[NSString alloc] initWithData:responseData 
-										 encoding:NSUTF8StringEncoding];
-	NSLog(@"Response Code: %d", [response statusCode]);
-	NSLog(@"Content-Type: %@", [[response allHeaderFields] 
-							objectForKey:@"Content-Type"]);
-	if ([response statusCode] >= 200 && [response statusCode] < 300)
-		NSLog(@"Result: %@", result);
+	BOOL success = false;
+	int retryCount = 0;
+	NSString *result = nil;
+	
+	while (success == false && retryCount <=3) {
+		NSHTTPURLResponse* response = nil;  
+		NSError* error = nil;  
+		NSData *responseData = [NSURLConnection sendSynchronousRequest:req   
+												 returningResponse:&response  
+															 error:&error];  
+		result = [[NSString alloc] initWithData:responseData 
+											 encoding:NSUTF8StringEncoding];
+		NSLog(@"Response Code: %d", [response statusCode]);
+		NSLog(@"Content-Type: %@", [[response allHeaderFields] 
+								objectForKey:@"Content-Type"]);
+		if ([response statusCode] >= 200 && [response statusCode] < 300) {
+			NSLog(@"Result: %@", result);
+			success = true;
+		}
+		if ([response statusCode] == 204) {
+			//Error - Null Payload
+			[result release];
+			success = false;
+		}
+		
+		retryCount++;
+	}
 	
 	[url release];
 	[req release];
