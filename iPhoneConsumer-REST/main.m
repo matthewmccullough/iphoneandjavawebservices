@@ -1,10 +1,5 @@
-//
-//  main.m
-//  IPhoneWSConsumer
-//
-//  Created by Matthew McCullough on 11/10/08.
-//  Copyright Ambient Ideas, LLC 2008. All rights reserved.
-//
+//  Created by Matthew McCullough of Ambient Ideas, LLC on 11/9/08.
+//  Free for any use for any purpose.  No license restrictions.
 
 #import <UIKit/UIKit.h>
 
