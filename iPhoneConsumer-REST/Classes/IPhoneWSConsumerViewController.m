@@ -10,8 +10,16 @@
 @synthesize pickerData;
 
 
+//- (void)loadView {
+//	[super loadView];
+//	[activityIndicator stopAnimating];
+//}
+
+
 - (IBAction) addContestant:(id) sender {	
 	[self textFieldShouldReturn:txtContestantName];
+	
+	[activityIndicator startAnimating];
 	
 	NSString* statusText;
 	
@@ -28,6 +36,8 @@
 	//Web Service call
 	AIWSObject *webservice = [[AIWSObject alloc] init];
 	[webservice initiateRESTAddName:txtContestantName.text];
+	
+	[activityIndicator stopAnimating];
 	
 	[webservice release];
 	[statusText release];
@@ -81,6 +91,7 @@
 	NSMutableArray  *array  = [[NSMutableArray alloc] initWithObjects: nil];
 	self.pickerData  = array;
 	[array release];
+	[activityIndicator stopAnimating];
 }
 
 /**

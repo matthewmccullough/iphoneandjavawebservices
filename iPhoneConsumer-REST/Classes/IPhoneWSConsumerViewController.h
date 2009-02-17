@@ -8,6 +8,7 @@
 	IBOutlet UILabel *lblStatus;
 	IBOutlet UIPickerView *pckContestants;
 	NSMutableArray *pickerData;
+	IBOutlet UIActivityIndicatorView *activityIndicator;
 }
 	
 @property(nonatomic,retain) IBOutlet UITextField *txtContestantName;
