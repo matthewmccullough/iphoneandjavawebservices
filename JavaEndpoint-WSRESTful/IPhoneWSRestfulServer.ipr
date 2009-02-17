@@ -30,6 +30,9 @@
       <entry name="?*.ftl" />
     </wildcardResourcePatterns>
   </component>
+  <component name="CopyrightManager" default="">
+    <module2copyright />
+  </component>
   <component name="DependenciesAnalyzeManager">
     <option name="myForwardDirection" value="false" />
   </component>
@@ -229,6 +232,9 @@
     <option name="projectName" value="IPhoneWSRestfulServer" />
   </component>
   <component name="ProjectFileVersion" converted="true" />
+  <component name="ProjectKey">
+    <option name="state" value="project:///Users/mccm06/Documents/Teach/iPhone and Java Web Services - 1 Hour/Code/JavaEndpoint-WSRESTful/IPhoneWSRestfulServer.ipr" />
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IPhoneWSRestful.iml" filepath="$PROJECT_DIR$/IPhoneWSRestful.iml" />
@@ -261,21 +267,21 @@
   <component name="libraryTable">
     <library name="lib">
       <CLASSES>
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/activation-1.1.jar!/" />
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/asm-3.1.jar!/" />
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/FastInfoset-1.2.2.jar!/" />
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/grizzly-servlet-webserver-1.8.6.jar!/" />
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/http-20070405.jar!/" />
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/jaxb-api-2.1.jar!/" />
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/jaxb-impl-2.1.jar!/" />
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/jdom-1.0.jar!/" />
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/jersey-1.0.jar!/" />
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/jettison-1.0.1.jar!/" />
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/jsr311-api-1.0.jar!/" />
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/mail-1.4.jar!/" />
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/persistence-api-1.0.2.jar!/" />
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/rome-0.9.jar!/" />
-        <root url="jar:///Users/mccm06/Library/Caches/IntelliJIDEA80/webservices/jersey/1.0/stax-api-1.0-2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/activation-1.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/asm-3.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/FastInfoset-1.2.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/grizzly-servlet-webserver-1.8.6.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/http-20070405.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jaxb-api-2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jaxb-impl-2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jdom-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jersey-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jettison-1.0.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jsr311-api-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/mail-1.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/persistence-api-1.0.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/rome-0.9.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/stax-api-1.0-2.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
