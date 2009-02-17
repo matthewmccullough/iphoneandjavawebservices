@@ -59,11 +59,19 @@ public class ContestantDrawing {
     @PUT
     @Path("/{name}")
     @Consumes("text/plain")
-    public void addContestant
+    public String addContestant
             (
                     @PathParam("name") String contestantName) {
         System.out.println("Adding contestant: " + contestantName);
         contestants.add(contestantName);
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        return "Success";
     }
 
     /**
