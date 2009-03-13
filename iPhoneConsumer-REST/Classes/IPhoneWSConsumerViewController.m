@@ -8,6 +8,8 @@
 @synthesize txtContestantName,lblStatus,pckContestants;
 @synthesize pickerData;
 
+NSString *baseURLString = @"http://Opus.local:9090/drawing/";
+
 
 - (IBAction) addContestant:(id) sender {
 	NSLog (@"addContestant");
@@ -81,7 +83,6 @@
 - (void)viewDidLoad 
 {
 	NSLog (@"viewDidLoad");
-	//NSMutableArray  *array  = [[NSMutableArray alloc] initWithObjects: @"Luke", @"Leia", @"Han", nil];
 	NSMutableArray  *array  = [[NSMutableArray alloc] initWithObjects: nil];
 	self.pickerData  = array;
 	[array release];
@@ -130,8 +131,6 @@
 - (void)initiateRESTAddName:(NSString*) contestantName
 {
 	[activityIndicator startAnimating];
-	
-	NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 	NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@", baseURLString, contestantName];
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -213,7 +212,6 @@
  */
 - (NSString*)initiateRESTPickWinner
 {
-	NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 	NSURL *url = [[NSURL alloc] initWithString:baseURLString];
 	NSLog(@"Pick Winner URL: %d", *url);
 	NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -221,35 +219,31 @@
 	NSLog(@"Pick Winner request: %d", *req);
 	
 	BOOL success = false;
-	int retryCount = 0;
+	
 	NSString *result = nil;
 	
-	// Retry the web service call up to three times
-	while (success == false && retryCount <3) {
-		NSHTTPURLResponse* response = nil;  
-		NSError* error = nil;  
-		NSData *responseData = [NSURLConnection sendSynchronousRequest:req   
-													 returningResponse:&response  
-																 error:&error];  
-		result = [[NSString alloc] initWithData:responseData 
-									   encoding:NSUTF8StringEncoding];
-		NSLog(@"Response Code: %d", [response statusCode]);
-		NSLog(@"Content-Type: %@", [[response allHeaderFields] 
-									objectForKey:@"Content-Type"]);
-		//Log the usual HTTP 200 through 299 responses
-		if ([response statusCode] >= 200 && [response statusCode] < 300) {
-			NSLog(@"Result: %@", result);
-			success = true;
-		}
-		//HTTP 204 is a NULL Payload which we occasionally and inexplicably get. Highly reproducible.
-		if ([response statusCode] == 204) {
-			[result release];
-			success = false;
-		}
-		
-		retryCount++;
-	}
 	
+	NSHTTPURLResponse* response = nil;  
+	NSError* error = nil;  
+	NSData *responseData = [NSURLConnection sendSynchronousRequest:req   
+												 returningResponse:&response  
+															 error:&error];  
+	result = [[NSString alloc] initWithData:responseData 
+								   encoding:NSUTF8StringEncoding];
+	NSLog(@"Response Code: %d", [response statusCode]);
+	NSLog(@"Content-Type: %@", [[response allHeaderFields] 
+								objectForKey:@"Content-Type"]);
+	//Log the usual HTTP 200 through 299 responses
+	if ([response statusCode] >= 200 && [response statusCode] < 300) {
+		NSLog(@"Result: %@", result);
+		success = true;
+	}
+	//HTTP 204 is a NULL Payload which we occasionally and inexplicably get. Highly reproducible.
+	if ([response statusCode] == 204) {
+		[result release];
+		success = false;
+	}		
+			
 	[url release];
 	[req release];
 	
