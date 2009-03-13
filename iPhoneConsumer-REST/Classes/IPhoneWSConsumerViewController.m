@@ -5,14 +5,21 @@
 
 @implementation IPhoneWSConsumerViewController
 
-@synthesize txtContestantName,lblStatus,pckContestants;
+@synthesize txtContestantName, lblStatus, pckContestants;
 @synthesize pickerData;
+@synthesize xmlParser;
+@synthesize xmlListOfContestants;
+@synthesize rawWSData;
+@synthesize activityIndicator;
 
 NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 
-
+/**
+ * The button responder when ADD is pressed.
+ */
 - (IBAction) addContestant:(id) sender {
 	NSLog (@"addContestant");
+	//Hide the keyboard
 	[txtContestantName resignFirstResponder];
 	
 	NSLog (@"startAnimating");
@@ -77,6 +84,10 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 }
 		
 
+////////////////////////////////////////////////////////////////////////////
+// Picker View (Table of Contestants)
+////////////////////////////////////////////////////////////////////////////
+
 /**
  * Load the initial empty array for contestants in the pickerView
  */
@@ -116,112 +127,66 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 	return [pickerData objectAtIndex: row];
 }
 
-//WEB SERVICE
-//////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////
+// WEB SERVICE
+// Documentation at:
+// http://developer.apple.com/documentation/Cocoa/Conceptual/URLLoadingSystem/Tasks/UsingNSURLConnection.html
+//////////////////////////////////////////////////////////////////////////////////
 
 /**
  * Add a name to the contestant list via a web service call.
- * Appears to leak memory on the sendSynchronousRequest call.
- * Apple acknowledges. Hasn't fixed it since October 2008 at a minimum on the 2.2 firmware/SDK
+ *
+ * Appears to leak memory on the sendSynchronousRequest variant of the call.  The async version does not leak.
+ *
+ * Apple acknowledged my defect. Hasn't fixed it since October 2008 at a minimum on the 2.2 firmware/SDK
  * http://lists.apple.com/archives/Macnetworkprog/2008/Nov/msg00013.html
  * and
  * http://discussions.apple.com/thread.jspa?messageID=8200590
- *
  */
 - (void)initiateRESTAddName:(NSString*) contestantName
 {
 	[activityIndicator startAnimating];
 	NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@", baseURLString, contestantName];
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
-	NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:url];
+	
+	//****** DANGER *******
+	//NOTE: initWithURL can only be called on an alloced request; requestWithURL allocs and sets up.
+	//NOTE: initWithURL leaks memory, even if you release the request. requestWithURL does not leak at all.
+	NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
 	[req setHTTPMethod:@"PUT"];
 	
-	//Asynchronous
-	NSURLConnection *connection = [[NSURLConnection alloc]
-								   initWithRequest:req
-								   delegate:self];
+	//Asynchronous.
+	//Connection returned from this call will be released upon error or success async methods.
+	[[NSURLConnection alloc] initWithRequest:req
+									delegate:self];
+	
+	//Allocate a NSMutableData to contain all the data chunks we'll receive from the WS
+	rawWSData = [[NSMutableData data] retain];
 	
 	[urlString release];
 	[url release];
-	[req release];
-	[connection release];
+	NSLog( @"Req ref count: %d", [req retainCount]);
 }
-
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-	NSLog (@"connectionDidReceiveResponse");
-	
-	NSLog(@"Response Code: %d", [response statusCode]);
-	NSLog(@"Content-Type: %@", [[response allHeaderFields] objectForKey:@"Content-Type"]);
-	//Good response codes are 200 through 299
-	if ([response statusCode] >= 200 && [response statusCode] < 300 && [response statusCode] != 204) {
-		//Call was successful
-		NSLog(@"Web service call deemed successful based on status code.");
-	}
-	else {
-		//Bad response codes are 204 (null payload) and 400 series
-		UIAlertView *errorAlert = [[UIAlertView alloc]
-								   initWithTitle: @"Error"
-								   message: [[NSString alloc] initWithFormat:@"Error in Web Service call. Response code %d", [response statusCode]]
-								   delegate:nil
-								   cancelButtonTitle:@"OK"
-								   otherButtonTitles:nil];
-		[errorAlert show];
-		[errorAlert release];
-	}
-}
-
-- (void)connection:(NSURLConnection *)connection
-	didReceiveData:(NSData *)data {
-	NSLog (@"connectionDidReceiveData");
-	NSString *newText = [[NSString alloc]
-						 initWithData:data
-						 encoding:NSUTF8StringEncoding];
-	if (newText != NULL) {
-		NSLog(newText);
-		//[self appendTextToView:newText];
-		[newText release];
-	}
-}
-
-- (void) connectionDidFinishLoading: (NSURLConnection*) connection {
-	NSLog (@"connectionDidFinishLoading");
-	[activityIndicator stopAnimating];
-}
-
--(void) connection:(NSURLConnection *)connection
-  didFailWithError: (NSError *)error {
-	UIAlertView *errorAlert = [[UIAlertView alloc]
-							   initWithTitle: [error localizedDescription]
-							   message: [error localizedFailureReason]
-							   delegate:nil
-							   cancelButtonTitle:@"OK"
-							   otherButtonTitles:nil];
-	[errorAlert show];
-	[errorAlert release];
-	[activityIndicator stopAnimating];
-	NSLog (@"Connection Failed with Error");
-}
-
-
-
 
 
 /**
+ * Synchronous WS call.
+ *
  * Pick a winner from the contestant list via a web service call and return their name.
  */
 - (NSString*)initiateRESTPickWinner
 {
 	NSURL *url = [[NSURL alloc] initWithString:baseURLString];
 	NSLog(@"Pick Winner URL: %d", *url);
-	NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:url];
+	NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
 	[req setHTTPMethod:@"GET"];
 	NSLog(@"Pick Winner request: %d", *req);
 	
 	BOOL success = false;
 	
 	NSString *result = nil;
-	
 	
 	NSHTTPURLResponse* response = nil;  
 	NSError* error = nil;  
@@ -243,11 +208,115 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 		[result release];
 		success = false;
 	}		
-			
+	
 	[url release];
-	[req release];
 	
 	return result;
 }
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
+// HTTP Communication Callbacks
+///////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * APPLE DOCUMENTATION:
+ * This method is called when the server has determined that it
+ * has enough information to create an NSURLResponse.
+ *
+ * It can be called multiple times, for example in the case of a
+ * redirect, so each time we reset the data.
+ */
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+	
+    [rawWSData setLength:0];
+	
+	NSLog (@"connectionDidReceiveResponse");
+	
+	//////////////////////////////////////////////////////////////////
+	// Check the response code for any HTTP connectivity errors
+	//////////////////////////////////////////////////////////////////
+	NSLog(@"Response Code: %d", [response statusCode]);
+	NSLog(@"Content-Type: %@", [[response allHeaderFields] objectForKey:@"Content-Type"]);
+
+	//Good response codes are 200 through 299
+	if ([response statusCode] >= 200 && [response statusCode] < 300 && [response statusCode] != 204) {
+		//Call was successful
+		NSLog(@"Web service call deemed successful based on status code.");
+	}
+	else {
+		//Bad response codes are 204 (null payload) and 400 series
+		
+		//Build and show an alert dialog (overlay)
+		UIAlertView *errorAlert = [[UIAlertView alloc]
+								   initWithTitle: @"Error"
+								   message: [[NSString alloc] initWithFormat:@"Error in Web Service call. Response code %d", [response statusCode]]
+								   delegate:nil
+								   cancelButtonTitle:@"OK"
+								   otherButtonTitles:nil];
+		[errorAlert show];
+		[errorAlert release];
+	}
+}
+
+/**
+ * We received a chunk of data (but not guaranteed to be all of it).
+ * Append to our data buffer.
+ * Can be used to indicate progress to the user.
+ */
+- (void)connection:(NSURLConnection *)connection
+	didReceiveData:(NSData *)data {
+	NSLog (@"connectionDidReceiveData");
+	
+	[rawWSData appendData:data];
+}
+
+/**
+ * The communication is complete. We can now process the data that was received in chunks.
+ */
+- (void) connectionDidFinishLoading: (NSURLConnection*) connection {
+	NSLog (@"connectionDidFinishLoading");
+	[activityIndicator stopAnimating];
+
+	NSString *newText = [[NSString alloc]
+						 initWithData:rawWSData
+						 encoding:NSUTF8StringEncoding];
+	if (newText != NULL) {
+		NSLog(newText);
+	}
+	
+	[newText release];
+	[connection release];
+    [rawWSData release];
+}
+
+/**
+ * The connection failed with a catastrophic error.
+ */
+-(void) connection:(NSURLConnection *)connection
+  didFailWithError: (NSError *)error {
+	[activityIndicator stopAnimating];
+	NSLog (@"Connection Failed with Error");
+	
+	[connection release];
+	[rawWSData release];
+	
+	//Build and show an error message
+	UIAlertView *errorAlert = [[UIAlertView alloc]
+							   initWithTitle: [error localizedDescription]
+							   message: [error localizedFailureReason]
+							   delegate:nil
+							   cancelButtonTitle:@"OK"
+							   otherButtonTitles:nil];
+	[errorAlert show];
+	[errorAlert release];
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////
+//XML parsing
+//////////////////////////////////////////////////////////////////////////
 
 @end
