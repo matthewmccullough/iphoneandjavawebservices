@@ -32,7 +32,7 @@ public class ContestantDrawing {
      */
     @GET
     @Produces("text/plain")
-    public String getWinner() {
+    public String getWinner() throws InterruptedException {
         String randomContestantName = null;
 
         if (contestants.isEmpty()) {
@@ -48,6 +48,8 @@ public class ContestantDrawing {
 
         System.out.println("Randomly retriving contestant: " + randomContestantName);
 
+        Thread.sleep(3000);
+
         return randomContestantName;
     }
 
@@ -59,19 +61,13 @@ public class ContestantDrawing {
     @PUT
     @Path("/{name}")
     @Consumes("text/plain")
-    public String addContestant
-            (
-                    @PathParam("name") String contestantName) {
+    public String addContestant(@PathParam("name") String contestantName) throws InterruptedException {
         System.out.println("Adding contestant: " + contestantName);
         contestants.add(contestantName);
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
+        Thread.sleep(3000);
 
-        return "Success";
+        return contestantName;
     }
 
     /**
