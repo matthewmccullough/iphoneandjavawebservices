@@ -14,6 +14,7 @@
 
 @synthesize errorSelector;
 @synthesize successSelector;
+@synthesize wsTextResponse;
 
 NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 
@@ -25,60 +26,63 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 	//Hide the keyboard
 	[txtContestantName resignFirstResponder];
 	
-	NSLog (@"startAnimating");
 	[activityIndicator startAnimating];
 	
-	NSString* statusText;
-	
 	if([txtContestantName.text length] == 0) {
-		statusText = @"No status";
+		lblStatus.text = @"No status";
+		return;
 	}
-	else {
-		statusText = [[NSString alloc] initWithFormat:@"Contestant added: %@!",txtContestantName.text];
-		[self.pickerData addObject:txtContestantName.text];
-		[self.pckContestants reloadComponent:0];
-	}
-	lblStatus.text = statusText;
-	
-	//Web Service call
-	NSLog (@"webService AddName");
-	NSLog(statusText);
-	[self initiateRESTAddName:txtContestantName.text];
 	
 	successSelector = @selector(addContestantSuccess);
 	
-	[statusText release];
+	NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@", baseURLString, txtContestantName.text];
+	[self initiateRESTCall:nil :urlString :@"PUT"];
+	
+	[urlString release];
 }
 
 - (void) addContestantSuccess {
-	NSLog(@"Success");
+	NSLog(@"addContestantSuccess");
+	
+	lblStatus.text = [[NSString alloc] initWithFormat:@"Contestant added: %@!", txtContestantName.text];
+	[self.pickerData addObject:txtContestantName.text];
+	[self.pckContestants reloadComponent:0];
+	
+	[lblStatus.text release];
 }
-
 
 
 - (IBAction) pickWinner:(id) sender {
 	NSLog (@"pickWinner");
-	NSString* statusText;
-	NSString* winnerName = @"DEFAULT";
-
-	//Call WS
-	winnerName = [self initiateRESTPickWinner];
-
-	statusText = [@"Winner is: " stringByAppendingString: winnerName];
+	//Hide the keyboard
+	[txtContestantName resignFirstResponder];
 	
-	lblStatus.text = statusText;
+	[activityIndicator startAnimating];
+	
+	successSelector = @selector(pickWinnerSuccess);
+	[self initiateRESTCall:nil
+						  :baseURLString
+						  :@"GET"];
+}
+
+
+- (void) pickWinnerSuccess {
+	NSLog(@"getWinnerSuccess");
+	
+	NSLog(@"Winner is: %@", self.wsTextResponse);
+	NSString *winner = [[NSString alloc] initWithFormat:@"Winner is: %@", self.wsTextResponse];
+	lblStatus.text = winner;
+	[winner release];
 	
 	//Find which row in the data array this name is
 	int rowForWinningContestant = 0;
 	NSString *currentString = nil;
 	for (rowForWinningContestant = 0; rowForWinningContestant < [pickerData count]; rowForWinningContestant++) {
 		currentString = [pickerData objectAtIndex:rowForWinningContestant];
-		if ([currentString isEqualTo:winnerName]) {
+		if ([currentString isEqualTo:self.wsTextResponse]) {
 			[pckContestants selectRow:rowForWinningContestant inComponent:0 animated:YES];
 		}
 	}
-	
-	[winnerName release];
 }
 
 	
@@ -104,8 +108,8 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 - (void)viewDidLoad 
 {
 	NSLog (@"viewDidLoad");
-	NSMutableArray  *array  = [[NSMutableArray alloc] initWithObjects: nil];
-	self.pickerData  = array;
+	NSMutableArray *array  = [[NSMutableArray alloc] initWithObjects: nil];
+	self.pickerData = array;
 	[array release];
 	[activityIndicator stopAnimating];
 }
@@ -155,17 +159,22 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
  * and
  * http://discussions.apple.com/thread.jspa?messageID=8200590
  */
-- (void)initiateRESTAddName:(NSString*) contestantName
+- (void)initiateRESTCall:(NSData*) bodyData
+						:(NSString*) urlString
+						:(NSString*) httpMethod
 {
 	[activityIndicator startAnimating];
-	NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@", baseURLString, contestantName];
+	
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	
 	//****** DANGER *******
 	//NOTE: initWithURL can only be called on an alloced request; requestWithURL allocs and sets up.
 	//NOTE: initWithURL leaks memory, even if you release the request. requestWithURL does not leak at all.
 	NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
-	[req setHTTPMethod:@"PUT"];
+	[req setHTTPMethod:httpMethod];
+	if (bodyData != nil) {
+		[req setHTTPBody:bodyData];
+	}
 	
 	//Asynchronous.
 	//Connection returned from this call will be released upon error or success async methods.
@@ -174,55 +183,9 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 	
 	//Allocate a NSMutableData to contain all the data chunks we'll receive from the WS
 	rawWSData = [[NSMutableData data] retain];
-	
-	[urlString release];
+
 	[url release];
 }
-
-
-/**
- * Synchronous WS call.
- *
- * Pick a winner from the contestant list via a web service call and return their name.
- */
-- (NSString*)initiateRESTPickWinner
-{
-	NSURL *url = [[NSURL alloc] initWithString:baseURLString];
-	NSLog(@"Pick Winner URL: %d", *url);
-	NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
-	[req setHTTPMethod:@"GET"];
-	NSLog(@"Pick Winner request: %d", *req);
-	
-	BOOL success = false;
-	
-	NSString *result = nil;
-	
-	NSHTTPURLResponse* response = nil;  
-	NSError* error = nil;  
-	NSData *responseData = [NSURLConnection sendSynchronousRequest:req   
-												 returningResponse:&response  
-															 error:&error];  
-	result = [[NSString alloc] initWithData:responseData 
-								   encoding:NSUTF8StringEncoding];
-	NSLog(@"Response Code: %d", [response statusCode]);
-	NSLog(@"Content-Type: %@", [[response allHeaderFields] 
-								objectForKey:@"Content-Type"]);
-	//Log the usual HTTP 200 through 299 responses
-	if ([response statusCode] >= 200 && [response statusCode] < 300) {
-		NSLog(@"Result: %@", result);
-		success = true;
-	}
-	//HTTP 204 is a NULL Payload which we occasionally and inexplicably get. Highly reproducible.
-	if ([response statusCode] == 204) {
-		[result release];
-		success = false;
-	}		
-	
-	[url release];
-	
-	return result;
-}
-
 
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -288,16 +251,16 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 	NSLog (@"connectionDidFinishLoading");
 	[activityIndicator stopAnimating];
 
-	NSString *newText = [[NSString alloc]
+	wsTextResponse = [[NSString alloc]
 						 initWithData:rawWSData
 						 encoding:NSUTF8StringEncoding];
-	if (newText != NULL) {
-		NSLog(newText);
+	if (wsTextResponse != NULL) {
+		NSLog(@"Web service response: %@", wsTextResponse);
 	}
 	
 	[self performSelector:successSelector];
 	
-	[newText release];
+	[wsTextResponse release];
 	[connection release];
     [rawWSData release];
 }

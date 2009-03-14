@@ -13,18 +13,20 @@
 	NSMutableString *xmlListOfContestants;
 	NSXMLParser *xmlParser;
 	NSMutableData *rawWSData;
+	NSString *wsTextResponse;
 	
 	SEL errorSelector;
 	SEL successSelector;
 }
 	
-@property(nonatomic,retain) IBOutlet UITextField *txtContestantName;
-@property(nonatomic,retain) IBOutlet UILabel *lblStatus;
-@property(nonatomic,retain) UIPickerView *pckContestants;
-@property(nonatomic,retain) NSMutableArray *pickerData;
+@property(nonatomic, retain) IBOutlet UITextField *txtContestantName;
+@property(nonatomic, retain) IBOutlet UILabel *lblStatus;
+@property(nonatomic, retain) UIPickerView *pckContestants;
+@property(nonatomic, retain) NSMutableArray *pickerData;
 @property(nonatomic, retain) NSXMLParser *xmlParser;
 @property(nonatomic, retain) NSMutableString *xmlListOfContestants;
 @property(nonatomic, retain) NSMutableData *rawWSData;
+@property(retain) NSString *wsTextResponse;
 
 @property(nonatomic, assign) SEL errorSelector;
 @property(nonatomic, assign) SEL successSelector;
