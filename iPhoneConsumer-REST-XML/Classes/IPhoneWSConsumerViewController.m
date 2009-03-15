@@ -6,33 +6,44 @@
 @implementation IPhoneWSConsumerViewController
 
 @synthesize txtContestantName, lblStatus, pckContestants;
+@synthesize addButton;
+@synthesize pickWinnerButton;
+@synthesize activityIndicator;
+
 @synthesize pickerData;
 @synthesize xmlParser;
-@synthesize xmlListOfContestants;
 @synthesize rawWSData;
-@synthesize activityIndicator;
+@synthesize wsTextResponse;
 
 @synthesize errorSelector;
 @synthesize successSelector;
-@synthesize wsTextResponse;
 
 NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 
 /**
  * The button responder when ADD is pressed.
+ *
+ * Hides the keyboard if it is showing, starts the activity flower animation,
+ * registers the success callback, and calls the web service.
  */
 - (IBAction) addContestant:(id) sender {
 	NSLog (@"addContestant");
+	
+	[self enableAllButtons: NO];
+	
 	//Hide the keyboard
 	[txtContestantName resignFirstResponder];
 	
 	[activityIndicator startAnimating];
 	
+	//Check the length 
 	if([txtContestantName.text length] == 0) {
-		lblStatus.text = @"No status";
+		lblStatus.text = @"Please supply a non-empty contestant name to add";
+		[self enableAllButtons: YES];
 		return;
 	}
 	
+	//Register the success callback method
 	successSelector = @selector(addContestantSuccess);
 	
 	NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@", baseURLString, txtContestantName.text];
@@ -41,32 +52,54 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 	[urlString release];
 }
 
+/**
+ * The RESTful web service success callback handler. Processes the resultant successful add of a
+ * name to the contestant pool by adding it to the pickerData list view and setting a status message
+ * to indicate the successful add.
+ */
 - (void) addContestantSuccess {
 	NSLog(@"addContestantSuccess");
 	
 	lblStatus.text = [[NSString alloc] initWithFormat:@"Contestant added: %@!", txtContestantName.text];
+	
+	//Add to pickerData list control
 	[self.pickerData addObject:txtContestantName.text];
+	//Reload the view to show the new contestant
 	[self.pckContestants reloadComponent:0];
+	
+	[self enableAllButtons: YES];
 	
 	[lblStatus.text release];
 }
 
 
+/**
+ * The button click handler for picking a winner.
+ *
+ * Kicks off the process of setting the web service VERB, calling the web service,
+ * registering the callback, and processing the return data.
+ */
 - (IBAction) pickWinner:(id) sender {
+	[self enableAllButtons: NO];
+	
 	NSLog (@"pickWinner");
 	//Hide the keyboard
 	[txtContestantName resignFirstResponder];
 	
 	[activityIndicator startAnimating];
 	
-	successSelector = @selector(pickWinnerSuccess);
+	successSelector = @selector(pickWinnerRESTSuccess);
 	[self initiateRESTCall:nil
 						  :baseURLString
 						  :@"GET"];
 }
 
-
-- (void) pickWinnerSuccess {
+/**
+ * The custom callback method called when the RESTful call to pickWinner is successful.
+ *
+ * Processes the aggregated textualized response string, and selects the UI row
+ */
+- (void) pickWinnerRESTSuccess {
 	NSLog(@"getWinnerSuccess");
 	
 	NSLog(@"Winner is: %@", self.wsTextResponse);
@@ -83,9 +116,24 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 			[pckContestants selectRow:rowForWinningContestant inComponent:0 animated:YES];
 		}
 	}
+	
+	[self enableAllButtons: YES];
 }
 
-	
+
+//////////////////////////////////////////////////////////////////
+// UI Methods
+//////////////////////////////////////////////////////////////////
+
+/**
+ * Enable or disable the buttons. Useful to block further input on 
+ * the UI until a web service call has come back as successful or unsuccessful.
+ */
+- (void)enableAllButtons:(BOOL) enable
+{
+	[addButton setEnabled:enable];
+	[pickWinnerButton setEnabled:enable];
+}
 
 /**
  * Release the keyboard display (hide it)
@@ -200,7 +248,7 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
  * It can be called multiple times, for example in the case of a
  * redirect, so each time we reset the data.
  */
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response {
 	
     [rawWSData setLength:0];
 	

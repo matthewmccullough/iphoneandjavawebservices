@@ -7,10 +7,11 @@
 	IBOutlet UITextField *txtContestantName;
 	IBOutlet UILabel *lblStatus;
 	IBOutlet UIPickerView *pckContestants;
-	NSMutableArray *pickerData;
+	IBOutlet UIButton *addButton;
+	IBOutlet UIButton *pickWinnerButton;
 	IBOutlet UIActivityIndicatorView *activityIndicator;
-	
-	NSMutableString *xmlListOfContestants;
+
+	NSMutableArray *pickerData;
 	NSXMLParser *xmlParser;
 	NSMutableData *rawWSData;
 	NSString *wsTextResponse;
@@ -22,9 +23,11 @@
 @property(nonatomic, retain) IBOutlet UITextField *txtContestantName;
 @property(nonatomic, retain) IBOutlet UILabel *lblStatus;
 @property(nonatomic, retain) UIPickerView *pckContestants;
+@property(nonatomic, retain) IBOutlet UIButton *addButton;
+@property(nonatomic, retain) IBOutlet UIButton *pickWinnerButton;
+
 @property(nonatomic, retain) NSMutableArray *pickerData;
 @property(nonatomic, retain) NSXMLParser *xmlParser;
-@property(nonatomic, retain) NSMutableString *xmlListOfContestants;
 @property(nonatomic, retain) NSMutableData *rawWSData;
 @property(retain) NSString *wsTextResponse;
 
@@ -33,6 +36,10 @@
 
 - (IBAction) addContestant:(id) sender;
 - (IBAction) pickWinner:(id) sender;
+- (void)enableAllButtons:(BOOL) enable;
+- (void)initiateRESTCall:(NSData*) bodyData
+						:(NSString*) urlString
+						:(NSString*) httpMethod;
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField;
 
