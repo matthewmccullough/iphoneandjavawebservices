@@ -2,6 +2,7 @@
 //  Free for any use for any purpose.  No license restrictions.
 
 #import "IPhoneWSConsumerViewController.h"
+#import "ContestantAddXMLParser.h"
 
 @implementation IPhoneWSConsumerViewController
 
@@ -11,17 +12,12 @@
 @synthesize activityIndicator;
 
 @synthesize pickerData;
-@synthesize xmlParser;
-
-@synthesize soapTagData;
 
 @synthesize rawWSData;
 @synthesize wsTextResponse;
 
 @synthesize errorSelector;
 @synthesize successSelector;
-
-BOOL recordThisTag = FALSE;
 
 NSString *baseURLString = @"http://localhost:8080/restgrails/contestantsRESTList";
 
@@ -67,11 +63,11 @@ NSString *baseURLString = @"http://localhost:8080/restgrails/contestantsRESTList
 	
 	lblStatus.text = [[NSString alloc] initWithFormat:@"Contestant added: %@!", txtContestantName.text];
 	
-	xmlParser = [[NSXMLParser alloc] initWithData: rawWSData];
-	[xmlParser setDelegate: self];
-	[xmlParser setShouldResolveExternalEntities: YES];
-	[xmlParser parse];
-	
+	ContestantAddXMLParser* parser = [ContestantAddXMLParser alloc];
+	[parser initWithData:rawWSData];
+	self.wsTextResponse = parser.soapTagData;
+	[parser release];
+
 	//Add to pickerData list control
 	[self.pickerData addObject:wsTextResponse];
 	//Reload the view to show the new contestant
@@ -129,43 +125,6 @@ NSString *baseURLString = @"http://localhost:8080/restgrails/contestantsRESTList
 	
 	[self enableAllButtons: YES];
 }
-
-
-//////////////////////////////////////////////////////////////////
-// XML PARSER
-//////////////////////////////////////////////////////////////////
--(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *) namespaceURI qualifiedName:(NSString *)qName
-   attributes: (NSDictionary *)attributeDict
-{
-	if( [elementName isEqualToString:@"name"])
-	{
-		if(!soapTagData)
-		{
-			soapTagData = [[NSMutableString alloc] init];
-		}
-		recordThisTag = TRUE;
-	}
-}
--(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
-{
-	if( recordThisTag )
-	{
-		[soapTagData appendString: string];
-	}
-}
--(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
-{
-	if( [elementName isEqualToString:@"name"])
-	{
-		recordThisTag = FALSE;
-		self.wsTextResponse = soapTagData;
-		[soapTagData release];
-		soapTagData = nil;
-		
-		NSLog(@"wsTextResponse retainCount: %d", [wsTextResponse retainCount]);
-	}
-}
-
 
 
 //////////////////////////////////////////////////////////////////

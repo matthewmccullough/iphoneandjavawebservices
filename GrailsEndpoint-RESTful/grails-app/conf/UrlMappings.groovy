@@ -4,8 +4,12 @@ class UrlMappings {
             action = [GET:"getREST", PUT:"updateREST", DELETE:"deleteREST", POST:"createREST"]
         }
         
-        "/contestantsREST/"(controller:"contestant"){
+        "/contestantsRESTList"(controller:"contestant"){
             action = [GET:"listREST"]
+        }
+        
+        "/contestantRESTRandom"(controller:"contestant"){
+            action = [GET:"randomREST"]
         }
         
       "/$controller/$action?/$id?"{

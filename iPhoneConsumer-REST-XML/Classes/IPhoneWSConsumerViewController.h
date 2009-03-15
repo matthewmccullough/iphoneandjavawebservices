@@ -12,9 +12,6 @@
 	IBOutlet UIActivityIndicatorView *activityIndicator;
 
 	NSMutableArray *pickerData;
-	NSXMLParser *xmlParser;
-	
-	NSMutableString *soapTagData;
 	
 	NSMutableData *rawWSData;
 	NSString *wsTextResponse;
@@ -32,9 +29,6 @@
 @property(nonatomic, retain) IBOutlet UIButton *pickWinnerButton;
 
 @property(nonatomic, retain) NSMutableArray *pickerData;
-@property(nonatomic, retain) NSXMLParser *xmlParser;
-
-@property(nonatomic, retain) NSMutableString *soapTagData;
 
 @property(nonatomic, retain) NSMutableData *rawWSData;
 @property(nonatomic, retain) NSString *wsTextResponse;

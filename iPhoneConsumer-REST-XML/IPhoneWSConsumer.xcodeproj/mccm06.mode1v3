@@ -276,7 +276,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>17</integer>
+									<integer>5</integer>
+									<integer>1</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -329,19 +331,23 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D58C59210F6CD5EE00A1977D</string>
+										<string>D58C598C0F6CDA0800A1977D</string>
 										<key>history</key>
 										<array>
-											<string>D52163BB0F1D50FE00992DA9</string>
 											<string>D5DBA1460F1D98270078F00E</string>
-											<string>D5DBA1480F1D98270078F00E</string>
 											<string>D5DD91620F4A5ECD00AFD7C5</string>
 											<string>D5E86E5A0F4C87C100454DB2</string>
-											<string>D5A5BBC80F6B03F100EEC2DC</string>
 											<string>D5A5BC1A0F6B1E3100EEC2DC</string>
 											<string>D58C585D0F6CC2D900A1977D</string>
-											<string>D58C59160F6CD4D000A1977D</string>
-											<string>D58C59170F6CD4D000A1977D</string>
+											<string>D58C59380F6CD7F500A1977D</string>
+											<string>D58C59390F6CD7F500A1977D</string>
+											<string>D58C593A0F6CD7F500A1977D</string>
+											<string>D58C593F0F6CD7F500A1977D</string>
+											<string>D58C59720F6CD98100A1977D</string>
+											<string>D58C59730F6CD98100A1977D</string>
+											<string>D58C59870F6CDA0800A1977D</string>
+											<string>D58C59880F6CDA0800A1977D</string>
+											<string>D58C59890F6CDA0800A1977D</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -379,6 +385,51 @@
 											<string>D58C58F70F6CD43F00A1977D</string>
 											<string>D58C59180F6CD4D000A1977D</string>
 											<string>D58C59190F6CD4D000A1977D</string>
+											<string>D58C59410F6CD7F500A1977D</string>
+											<string>D58C59420F6CD7F500A1977D</string>
+											<string>D58C59430F6CD7F500A1977D</string>
+											<string>D58C59440F6CD7F500A1977D</string>
+											<string>D58C59450F6CD7F500A1977D</string>
+											<string>D58C59460F6CD7F500A1977D</string>
+											<string>D58C59470F6CD7F500A1977D</string>
+											<string>D58C59480F6CD7F500A1977D</string>
+											<string>D58C59490F6CD7F500A1977D</string>
+											<string>D58C594A0F6CD7F500A1977D</string>
+											<string>D58C594B0F6CD7F500A1977D</string>
+											<string>D58C594C0F6CD7F500A1977D</string>
+											<string>D58C594D0F6CD7F500A1977D</string>
+											<string>D58C594E0F6CD7F500A1977D</string>
+											<string>D58C594F0F6CD7F500A1977D</string>
+											<string>D58C59500F6CD7F500A1977D</string>
+											<string>D58C59510F6CD7F500A1977D</string>
+											<string>D58C59520F6CD7F500A1977D</string>
+											<string>D58C59530F6CD7F500A1977D</string>
+											<string>D58C59540F6CD7F500A1977D</string>
+											<string>D58C59550F6CD7F500A1977D</string>
+											<string>D58C59560F6CD7F500A1977D</string>
+											<string>D58C59570F6CD7F500A1977D</string>
+											<string>D58C59580F6CD7F500A1977D</string>
+											<string>D58C59590F6CD7F500A1977D</string>
+											<string>D58C595A0F6CD7F500A1977D</string>
+											<string>D58C595B0F6CD7F500A1977D</string>
+											<string>D58C595C0F6CD7F500A1977D</string>
+											<string>D58C595D0F6CD7F500A1977D</string>
+											<string>D58C59680F6CD8F100A1977D</string>
+											<string>D58C59690F6CD8F100A1977D</string>
+											<string>D58C596A0F6CD8F100A1977D</string>
+											<string>D58C596B0F6CD8F100A1977D</string>
+											<string>D58C596C0F6CD8F100A1977D</string>
+											<string>D58C596D0F6CD8F100A1977D</string>
+											<string>D58C59770F6CD98100A1977D</string>
+											<string>D58C59780F6CD98100A1977D</string>
+											<string>D58C59790F6CD98100A1977D</string>
+											<string>D58C597A0F6CD98100A1977D</string>
+											<string>D58C597B0F6CD98100A1977D</string>
+											<string>D58C597C0F6CD98100A1977D</string>
+											<string>D58C597D0F6CD98100A1977D</string>
+											<string>D58C597E0F6CD98100A1977D</string>
+											<string>D58C598A0F6CDA0800A1977D</string>
+											<string>D58C598B0F6CDA0800A1977D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -572,8 +623,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D58C59220F6CD5EE00A1977D</string>
-		<string>D58C59200F6CD5D600A1977D</string>
+		<string>D58C598D0F6CDA0800A1977D</string>
 		<string>D5C8D0040EC94884004E6B91</string>
 		<string>D58C584F0F6CC15C00A1977D</string>
 		<string>D58C58500F6CC15C00A1977D</string>
@@ -603,7 +653,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>IPhoneWSConsumerViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -612,7 +662,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {982, 437}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 33 982 719 0 0 1440 878 </string>
+								<string>161 74 982 719 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -620,6 +670,8 @@
 							<string>437pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -636,7 +688,7 @@
 								<key>Frame</key>
 								<string>{{0, 442}, {982, 236}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 33 982 719 0 0 1440 878 </string>
+								<string>161 74 982 719 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -666,7 +718,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.buildV3</string>
 			<key>WindowString</key>
-			<string>0 33 982 719 0 0 1440 878 </string>
+			<string>161 74 982 719 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>D5C8D0040EC94884004E6B91</string>
 			<key>WindowToolIsVisible</key>

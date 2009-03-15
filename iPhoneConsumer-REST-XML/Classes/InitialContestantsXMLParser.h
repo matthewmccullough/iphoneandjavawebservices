@@ -6,9 +6,6 @@
 //  Copyright 2009 Ambient Ideas, LLC. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-
-
 @interface InitialContestantsXMLParser : NSObject {
 
 }

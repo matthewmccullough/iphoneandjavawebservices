@@ -4,8 +4,17 @@ class ContestantController {
 
     def scaffold = true
     
+    def randomREST = {
+        def contestant = null
+        while (contestant == null) {
+            contestant = Contestant.get(new Random().nextInt(Contestant.list().size))
+        }
+        
+        render contestant as XML 
+    }
+    
     def listREST = {
-        render Contestant.list() as JSON
+        render Contestant.list() as XML
     }
     
     def getREST = {
