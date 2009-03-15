@@ -2,6 +2,7 @@
 //  Free for any use for any purpose.  No license restrictions.
 
 #import "IPhoneWSConsumerViewController.h"
+#import "InitialContestantsXMLParser.h"
 #import "ContestantAddXMLParser.h"
 
 @implementation IPhoneWSConsumerViewController
@@ -19,7 +20,42 @@
 @synthesize errorSelector;
 @synthesize successSelector;
 
-NSString *baseURLString = @"http://localhost:8080/restgrails/contestantsRESTList";
+//NSString *baseURLString = @"http://localhost:8080/restgrails/contestantsRESTList";
+
+/**
+ * The button responder when ADD is pressed.
+ *
+ * Hides the keyboard if it is showing, starts the activity flower animation,
+ * registers the success callback, and calls the web service.
+ */
+- (void) getInitialContestants {
+	
+	//Register the success callback method
+	successSelector = @selector(getInitialContestantsSuccess);
+	
+	NSString *urlString = [[NSString alloc] initWithString:@"http://localhost:8080/restgrails/contestantRESTList/"];
+	[self initiateRESTCall:nil :urlString :@"GET"];
+	
+	[urlString release];
+}
+
+- (void) getInitialContestantsSuccess {
+	InitialContestantsXMLParser* parser = [InitialContestantsXMLParser alloc];
+	parser.nameFoundSelector = @selector(addContestantToListControl:);
+	parser.parentController = self;
+	//NSLog(@"about to handoff selector %@ to id %@", parser.nameFoundSelector, parser.parentController);
+	[parser initWithData:rawWSData];
+	
+	self.wsTextResponse = parser.soapTagData;
+	[parser release];
+}
+
+- (void) addContestantToListControl:(NSString*) newContestant {
+	//Add to pickerData list control
+	[self.pickerData addObject:newContestant];
+	//Reload the view to show the new contestant
+	[self.pckContestants reloadComponent:0];
+}
 
 /**
  * The button responder when ADD is pressed.
@@ -170,6 +206,9 @@ NSString *baseURLString = @"http://localhost:8080/restgrails/contestantsRESTList
 	self.pickerData = array;
 	[array release];
 	[activityIndicator stopAnimating];
+	
+	//Load the existing names from the web service
+	[self getInitialContestants];
 }
 
 /**
