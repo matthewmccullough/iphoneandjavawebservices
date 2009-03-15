@@ -96,7 +96,7 @@ NSString *baseURLString = @"http://localhost:8080/restgrails/contestantsRESTList
 	
 	successSelector = @selector(pickWinnerRESTSuccess);
 	[self initiateRESTCall:nil
-						  :baseURLString
+						  :@"http://localhost:8080/restgrails/contestantRESTRandom"
 						  :@"GET"];
 }
 
@@ -108,7 +108,11 @@ NSString *baseURLString = @"http://localhost:8080/restgrails/contestantsRESTList
 - (void) pickWinnerRESTSuccess {
 	NSLog(@"getWinnerSuccess");
 	
-	NSLog(@"Winner is: %@", self.wsTextResponse);
+	ContestantAddXMLParser* parser = [ContestantAddXMLParser alloc];
+	[parser initWithData:rawWSData];
+	self.wsTextResponse = parser.soapTagData;
+	[parser release];
+	
 	NSString *winner = [[NSString alloc] initWithFormat:@"Winner is: %@", self.wsTextResponse];
 	lblStatus.text = winner;
 	[winner release];

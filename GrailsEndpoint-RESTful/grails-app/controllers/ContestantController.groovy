@@ -5,15 +5,17 @@ class ContestantController {
     def scaffold = true
     
     def randomREST = {
+        //curl http://localhost:8080/restgrails/contestantRESTRandom
         def contestant = null
         while (contestant == null) {
-            contestant = Contestant.get(new Random().nextInt(Contestant.list().size))
+            contestant = Contestant.get(new Random().nextInt(Contestant.list().size+1))
         }
         
         render contestant as XML 
     }
     
     def listREST = {
+        //curl http://localhost:8080/restgrails/contestantRESTList
         render Contestant.list() as XML
     }
     

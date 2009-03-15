@@ -4,7 +4,7 @@ class UrlMappings {
             action = [GET:"getREST", PUT:"updateREST", DELETE:"deleteREST", POST:"createREST"]
         }
         
-        "/contestantsRESTList"(controller:"contestant"){
+        "/contestantRESTList"(controller:"contestant"){
             action = [GET:"listREST"]
         }
         
