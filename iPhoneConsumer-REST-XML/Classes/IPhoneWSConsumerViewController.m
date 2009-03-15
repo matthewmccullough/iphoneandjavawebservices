@@ -12,13 +12,18 @@
 
 @synthesize pickerData;
 @synthesize xmlParser;
+
+@synthesize soapTagData;
+
 @synthesize rawWSData;
 @synthesize wsTextResponse;
 
 @synthesize errorSelector;
 @synthesize successSelector;
 
-NSString *baseURLString = @"http://Opus.local:9090/drawing/";
+BOOL recordThisTag = FALSE;
+
+NSString *baseURLString = @"http://localhost:8080/restgrails/contestantsRESTList";
 
 /**
  * The button responder when ADD is pressed.
@@ -46,8 +51,8 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 	//Register the success callback method
 	successSelector = @selector(addContestantSuccess);
 	
-	NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@", baseURLString, txtContestantName.text];
-	[self initiateRESTCall:nil :urlString :@"PUT"];
+	NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@", @"http://localhost:8080/restgrails/contestantREST/?name=", txtContestantName.text];
+	[self initiateRESTCall:nil :urlString :@"POST"];
 	
 	[urlString release];
 }
@@ -62,8 +67,13 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 	
 	lblStatus.text = [[NSString alloc] initWithFormat:@"Contestant added: %@!", txtContestantName.text];
 	
+	xmlParser = [[NSXMLParser alloc] initWithData: rawWSData];
+	[xmlParser setDelegate: self];
+	[xmlParser setShouldResolveExternalEntities: YES];
+	[xmlParser parse];
+	
 	//Add to pickerData list control
-	[self.pickerData addObject:txtContestantName.text];
+	[self.pickerData addObject:wsTextResponse];
 	//Reload the view to show the new contestant
 	[self.pckContestants reloadComponent:0];
 	
@@ -119,6 +129,43 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 	
 	[self enableAllButtons: YES];
 }
+
+
+//////////////////////////////////////////////////////////////////
+// XML PARSER
+//////////////////////////////////////////////////////////////////
+-(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *) namespaceURI qualifiedName:(NSString *)qName
+   attributes: (NSDictionary *)attributeDict
+{
+	if( [elementName isEqualToString:@"name"])
+	{
+		if(!soapTagData)
+		{
+			soapTagData = [[NSMutableString alloc] init];
+		}
+		recordThisTag = TRUE;
+	}
+}
+-(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
+{
+	if( recordThisTag )
+	{
+		[soapTagData appendString: string];
+	}
+}
+-(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
+{
+	if( [elementName isEqualToString:@"name"])
+	{
+		recordThisTag = FALSE;
+		self.wsTextResponse = soapTagData;
+		[soapTagData release];
+		soapTagData = nil;
+		
+		NSLog(@"wsTextResponse retainCount: %d", [wsTextResponse retainCount]);
+	}
+}
+
 
 
 //////////////////////////////////////////////////////////////////

@@ -13,8 +13,13 @@
 
 	NSMutableArray *pickerData;
 	NSXMLParser *xmlParser;
+	
+	NSMutableString *soapTagData;
+	
 	NSMutableData *rawWSData;
 	NSString *wsTextResponse;
+	
+	//BOOL *recordThisTag;
 	
 	SEL errorSelector;
 	SEL successSelector;
@@ -28,8 +33,11 @@
 
 @property(nonatomic, retain) NSMutableArray *pickerData;
 @property(nonatomic, retain) NSXMLParser *xmlParser;
+
+@property(nonatomic, retain) NSMutableString *soapTagData;
+
 @property(nonatomic, retain) NSMutableData *rawWSData;
-@property(retain) NSString *wsTextResponse;
+@property(nonatomic, retain) NSString *wsTextResponse;
 
 @property(nonatomic, assign) SEL errorSelector;
 @property(nonatomic, assign) SEL successSelector;
