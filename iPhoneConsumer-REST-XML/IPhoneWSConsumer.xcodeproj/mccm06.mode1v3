@@ -228,8 +228,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -314,6 +312,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -331,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D5901E330F86C1E9006535EA</string>
+										<string>D5901E550F86CC01006535EA</string>
 										<key>history</key>
 										<array>
 											<string>D5DBA1460F1D98270078F00E</string>
@@ -349,7 +349,7 @@
 											<string>D5006C8E0F6CEEA1005F6FDD</string>
 											<string>D5006CA10F6CEEFE005F6FDD</string>
 											<string>D5006CE80F6CF156005F6FDD</string>
-											<string>D5901E320F86C1E9006535EA</string>
+											<string>D5901E2B0F86C1D6006535EA</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -562,11 +562,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D5901E3E0F86C1E9006535EA</string>
+		<string>D5901E4C0F86CB4D006535EA</string>
 		<string>D5901E3F0F86C1E9006535EA</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>D5C8D0040EC94884004E6B91</string>
+		<string>D5901E490F86CB4D006535EA</string>
 		<string>/Users/mccm06/Documents/Teach/Courses/iPhone-and-Java-1Hour/examples/iphoneandjavawebservices.git/iPhoneConsumer-REST-XML/IPhoneWSConsumer.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -1094,8 +1095,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBottomSmartGroupGIDs</key>
@@ -1157,6 +1156,8 @@
 							<string>185pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1196,8 +1197,8 @@
 			<true/>
 			<key>TableOfContents</key>
 			<array>
-				<string>D5006CB30F6CEFBB005F6FDD</string>
-				<string>D5006CB40F6CEFBB005F6FDD</string>
+				<string>D5901E490F86CB4D006535EA</string>
+				<string>D5901E4A0F86CB4D006535EA</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
 				<string>1CA1AED706398EBD00589147</string>
 			</array>
@@ -1206,9 +1207,9 @@
 			<key>WindowString</key>
 			<string>31 444 744 409 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
-			<string>D5006CB30F6CEFBB005F6FDD</string>
+			<string>D5901E490F86CB4D006535EA</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

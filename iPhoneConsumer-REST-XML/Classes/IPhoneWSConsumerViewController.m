@@ -158,7 +158,7 @@
 	NSString *currentString = nil;
 	for (rowForWinningContestant = 0; rowForWinningContestant < [pickerData count]; rowForWinningContestant++) {
 		currentString = [pickerData objectAtIndex:rowForWinningContestant];
-		if ([currentString isEqualTo:self.wsTextResponse]) {
+		if ([currentString isEqualToString:self.wsTextResponse]) {
 			[pckContestants selectRow:rowForWinningContestant inComponent:0 animated:YES];
 		}
 	}
