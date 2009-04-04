@@ -276,7 +276,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>4</integer>
+									<integer>5</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -319,7 +319,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>IPhoneWSConsumerViewController.m</string>
+								<string>IPhoneWSConsumerViewController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,11 +327,19 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>IPhoneWSConsumerViewController.m</string>
+										<string>IPhoneWSConsumerViewController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
+<<<<<<< Updated upstream:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
 										<string>D52B336E0F86DEB300CBAFE7</string>
+=======
+<<<<<<< Updated upstream:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
+										<string>D5C3FCA90F6DB6CC009C3046</string>
+=======
+										<string>D52B33780F86DFD700CBAFE7</string>
+>>>>>>> Stashed changes:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
+>>>>>>> Stashed changes:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
 										<key>history</key>
 										<array>
 											<string>D52163BB0F1D50FE00992DA9</string>
@@ -340,8 +348,16 @@
 											<string>D5DD91620F4A5ECD00AFD7C5</string>
 											<string>D5E86E5A0F4C87C100454DB2</string>
 											<string>D5A5BBC80F6B03F100EEC2DC</string>
+											<string>D52B33740F86DFB400CBAFE7</string>
 											<string>D5A5BBC90F6B03F100EEC2DC</string>
+<<<<<<< Updated upstream:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
 											<string>D52B336D0F86DEB300CBAFE7</string>
+=======
+<<<<<<< Updated upstream:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
+											<string>D572392E0F6CE005002C549A</string>
+=======
+>>>>>>> Stashed changes:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
+>>>>>>> Stashed changes:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -352,6 +368,7 @@
 											<string>D52163C20F1D50FE00992DA9</string>
 											<string>D5DBA14C0F1D98270078F00E</string>
 											<string>D5A5BB700F6AEF6D00EEC2DC</string>
+											<string>D52B33750F86DFB400CBAFE7</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -593,6 +610,8 @@
 							<string>437pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

@@ -22,23 +22,35 @@
 	};
 	28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1115, 946}}";
-			sepNavSelRange = "{976, 0}";
-			sepNavVisRange = "{0, 1214}";
+			sepNavIntBoundsRect = "{{0, 0}, {884, 722}}";
+			sepNavSelRange = "{1148, 0}";
+			sepNavVisRange = "{505, 803}";
 		};
 	};
 	28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */ = {
 		uiCtxt = {
+<<<<<<< Updated upstream:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
 			sepNavIntBoundsRect = "{{0, 0}, {892, 6319}}";
 			sepNavSelRange = "{1147, 52}";
 			sepNavVisRange = "{805, 508}";
+=======
+<<<<<<< Updated upstream:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
+			sepNavIntBoundsRect = "{{0, 0}, {892, 5928}}";
+			sepNavSelRange = "{6243, 0}";
+			sepNavVisRange = "{4451, 765}";
+=======
+			sepNavIntBoundsRect = "{{0, 0}, {908, 6422}}";
+			sepNavSelRange = "{5080, 35}";
+			sepNavVisRange = "{4953, 612}";
+>>>>>>> Stashed changes:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
+>>>>>>> Stashed changes:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
 			sepNavWindowFrame = "{{6, 56}, {750, 822}}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = D5C8CFE40EC9405D004E6B91 /* IPhoneWSConsumer */;
-		activeSDKPreference = iphonesimulator2.2;
+		activeSDKPreference = iphonesimulator3.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* IPhoneWSConsumer */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* IPhoneWSConsumer */,
@@ -163,11 +175,39 @@
 			PBXWorkspaceStateSaveDate = 260496904;
 		};
 		perUserProjectItems = {
+<<<<<<< Updated upstream:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
+=======
+<<<<<<< Updated upstream:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
+			D52163BB0F1D50FE00992DA9 /* PBXTextBookmark */ = D52163BB0F1D50FE00992DA9 /* PBXTextBookmark */;
+			D52163C20F1D50FE00992DA9 /* PBXTextBookmark */ = D52163C20F1D50FE00992DA9 /* PBXTextBookmark */;
+			D52CC1560F0DF96900D9FD15 /* PBXTextBookmark */ = D52CC1560F0DF96900D9FD15 /* PBXTextBookmark */;
+			D572392E0F6CE005002C549A /* PBXTextBookmark */ = D572392E0F6CE005002C549A /* PBXTextBookmark */;
+			D59AEDBE0F0926B800BF4DBC /* PBXTextBookmark */ = D59AEDBE0F0926B800BF4DBC /* PBXTextBookmark */;
+			D59AEDC00F0926B800BF4DBC /* PBXTextBookmark */ = D59AEDC00F0926B800BF4DBC /* PBXTextBookmark */;
+			D5A5BB700F6AEF6D00EEC2DC /* PBXTextBookmark */ = D5A5BB700F6AEF6D00EEC2DC /* PBXTextBookmark */;
+			D5A5BBC80F6B03F100EEC2DC /* PBXTextBookmark */ = D5A5BBC80F6B03F100EEC2DC /* PBXTextBookmark */;
+			D5A5BBC90F6B03F100EEC2DC /* PBXTextBookmark */ = D5A5BBC90F6B03F100EEC2DC /* PBXTextBookmark */;
+			D5C3FCA90F6DB6CC009C3046 /* PBXTextBookmark */ = D5C3FCA90F6DB6CC009C3046 /* PBXTextBookmark */;
+			D5C8D00A0EC9488E004E6B91 /* PBXTextBookmark */ = D5C8D00A0EC9488E004E6B91 /* PBXTextBookmark */;
+			D5DBA1460F1D98270078F00E /* PlistBookmark */ = D5DBA1460F1D98270078F00E /* PlistBookmark */;
+			D5DBA1480F1D98270078F00E /* PBXTextBookmark */ = D5DBA1480F1D98270078F00E /* PBXTextBookmark */;
+			D5DBA14C0F1D98270078F00E /* PlistBookmark */ = D5DBA14C0F1D98270078F00E /* PlistBookmark */;
+			D5DD91620F4A5ECD00AFD7C5 /* PBXTextBookmark */ = D5DD91620F4A5ECD00AFD7C5 /* PBXTextBookmark */;
+			D5E86E5A0F4C87C100454DB2 /* PBXTextBookmark */ = D5E86E5A0F4C87C100454DB2 /* PBXTextBookmark */;
+=======
+>>>>>>> Stashed changes:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
 			D52163BB0F1D50FE00992DA9 = D52163BB0F1D50FE00992DA9 /* PBXTextBookmark */;
 			D52163C20F1D50FE00992DA9 = D52163C20F1D50FE00992DA9 /* PBXTextBookmark */;
 			D52B335D0F86DE2500CBAFE7 /* PBXTextBookmark */ = D52B335D0F86DE2500CBAFE7 /* PBXTextBookmark */;
 			D52B336D0F86DEB300CBAFE7 /* PBXTextBookmark */ = D52B336D0F86DEB300CBAFE7 /* PBXTextBookmark */;
 			D52B336E0F86DEB300CBAFE7 /* PBXTextBookmark */ = D52B336E0F86DEB300CBAFE7 /* PBXTextBookmark */;
+<<<<<<< Updated upstream:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
+=======
+			D52B33740F86DFB400CBAFE7 /* PBXTextBookmark */ = D52B33740F86DFB400CBAFE7 /* PBXTextBookmark */;
+			D52B33750F86DFB400CBAFE7 /* PBXTextBookmark */ = D52B33750F86DFB400CBAFE7 /* PBXTextBookmark */;
+			D52B33760F86DFB400CBAFE7 /* PBXTextBookmark */ = D52B33760F86DFB400CBAFE7 /* PBXTextBookmark */;
+			D52B33780F86DFD700CBAFE7 /* PBXTextBookmark */ = D52B33780F86DFD700CBAFE7 /* PBXTextBookmark */;
+>>>>>>> Stashed changes:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
 			D52CC1560F0DF96900D9FD15 = D52CC1560F0DF96900D9FD15 /* PBXTextBookmark */;
 			D572392E0F6CE005002C549A = D572392E0F6CE005002C549A /* PBXTextBookmark */;
 			D59AEDBE0F0926B800BF4DBC = D59AEDBE0F0926B800BF4DBC /* PBXTextBookmark */;
@@ -182,6 +222,10 @@
 			D5DBA14C0F1D98270078F00E = D5DBA14C0F1D98270078F00E /* PlistBookmark */;
 			D5DD91620F4A5ECD00AFD7C5 = D5DD91620F4A5ECD00AFD7C5 /* PBXTextBookmark */;
 			D5E86E5A0F4C87C100454DB2 = D5E86E5A0F4C87C100454DB2 /* PBXTextBookmark */;
+<<<<<<< Updated upstream:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
+=======
+>>>>>>> Stashed changes:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
+>>>>>>> Stashed changes:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
 		};
 		sourceControlManager = D5C8CFF00EC94062004E6B91 /* Source Control */;
 		userBuildSettings = {
@@ -222,12 +266,21 @@
 		vrLen = 502;
 		vrLoc = 0;
 	};
+<<<<<<< Updated upstream:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
+=======
+<<<<<<< Updated upstream:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
+=======
+>>>>>>> Stashed changes:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
 	D52B335D0F86DE2500CBAFE7 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		name = "IPhoneWSConsumerViewController.m: 214";
 		rLen = 0;
+<<<<<<< Updated upstream:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
 		rLoc = 6243;
+=======
+		rLoc = 6249;
+>>>>>>> Stashed changes:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
 		rType = 0;
 		vrLen = 657;
 		vrLoc = 4521;
@@ -250,6 +303,50 @@
 		vrLen = 508;
 		vrLoc = 805;
 	};
+<<<<<<< Updated upstream:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
+=======
+	D52B33740F86DFB400CBAFE7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
+		name = "IPhoneWSConsumerViewController.m: 179";
+		rLen = 35;
+		rLoc = 5086;
+		rType = 0;
+		vrLen = 592;
+		vrLoc = 4819;
+	};
+	D52B33750F86DFB400CBAFE7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
+		name = "IPhoneWSConsumerViewController.m: 179";
+		rLen = 35;
+		rLoc = 5086;
+		rType = 0;
+		vrLen = 592;
+		vrLoc = 4819;
+	};
+	D52B33760F86DFB400CBAFE7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
+		name = "IPhoneWSConsumerViewController.h: 30";
+		rLen = 0;
+		rLoc = 1148;
+		rType = 0;
+		vrLen = 803;
+		vrLoc = 505;
+	};
+	D52B33780F86DFD700CBAFE7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
+		name = "IPhoneWSConsumerViewController.h: 30";
+		rLen = 0;
+		rLoc = 1148;
+		rType = 0;
+		vrLen = 803;
+		vrLoc = 505;
+	};
+>>>>>>> Stashed changes:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
+>>>>>>> Stashed changes:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.pbxuser
 	D52CC1560F0DF96900D9FD15 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
@@ -282,7 +379,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		name = "IPhoneWSConsumerViewController.m: 214";
 		rLen = 0;
-		rLoc = 6243;
+		rLoc = 6249;
 		rType = 0;
 		vrLen = 958;
 		vrLoc = 5382;
@@ -342,7 +439,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		name = "IPhoneWSConsumerViewController.m: 214";
 		rLen = 0;
-		rLoc = 6243;
+		rLoc = 6249;
 		rType = 0;
 		vrLen = 765;
 		vrLoc = 4451;

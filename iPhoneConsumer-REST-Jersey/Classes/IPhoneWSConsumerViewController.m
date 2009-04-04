@@ -63,7 +63,7 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
 	NSString *currentString = nil;
 	for (rowForWinningContestant = 0; rowForWinningContestant < [pickerData count]; rowForWinningContestant++) {
 		currentString = [pickerData objectAtIndex:rowForWinningContestant];
-		if ([currentString isEqualTo:winnerName]) {
+		if ([currentString isEqualToString:winnerName]) {
 			[pckContestants selectRow:rowForWinningContestant inComponent:0 animated:YES];
 		}
 	}
