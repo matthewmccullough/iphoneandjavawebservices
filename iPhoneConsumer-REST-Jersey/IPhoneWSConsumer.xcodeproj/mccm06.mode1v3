@@ -276,7 +276,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>4</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -319,7 +319,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>IPhoneWSConsumerViewController.h</string>
+								<string>IPhoneWSConsumerViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,19 +327,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>IPhoneWSConsumerViewController.h</string>
+										<string>IPhoneWSConsumerViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-<<<<<<< Updated upstream:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
-										<string>D52B336E0F86DEB300CBAFE7</string>
-=======
-<<<<<<< Updated upstream:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
-										<string>D5C3FCA90F6DB6CC009C3046</string>
-=======
-										<string>D52B33780F86DFD700CBAFE7</string>
->>>>>>> Stashed changes:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
->>>>>>> Stashed changes:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
+										<string>D52B33840F86E2E600CBAFE7</string>
 										<key>history</key>
 										<array>
 											<string>D52163BB0F1D50FE00992DA9</string>
@@ -348,16 +340,8 @@
 											<string>D5DD91620F4A5ECD00AFD7C5</string>
 											<string>D5E86E5A0F4C87C100454DB2</string>
 											<string>D5A5BBC80F6B03F100EEC2DC</string>
-											<string>D52B33740F86DFB400CBAFE7</string>
 											<string>D5A5BBC90F6B03F100EEC2DC</string>
-<<<<<<< Updated upstream:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
-											<string>D52B336D0F86DEB300CBAFE7</string>
-=======
-<<<<<<< Updated upstream:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
-											<string>D572392E0F6CE005002C549A</string>
-=======
->>>>>>> Stashed changes:iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
->>>>>>> Stashed changes:iPhoneConsumer-REST/IPhoneWSConsumer.xcodeproj/mccm06.mode1v3
+											<string>D52B336E0F86DEB300CBAFE7</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -368,7 +352,6 @@
 											<string>D52163C20F1D50FE00992DA9</string>
 											<string>D5DBA14C0F1D98270078F00E</string>
 											<string>D5A5BB700F6AEF6D00EEC2DC</string>
-											<string>D52B33750F86DFB400CBAFE7</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -426,9 +409,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D52B335E0F86DE2500CBAFE7</string>
+				<string>D52B33810F86E29F00CBAFE7</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D52B335F0F86DE2500CBAFE7</string>
+				<string>D52B33820F86E29F00CBAFE7</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -562,12 +545,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D52B336F0F86DEB300CBAFE7</string>
-		<string>D52B33690F86DE2500CBAFE7</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Users/mccm06/Documents/Teach/Courses/iPhone-and-Java-1Hour/examples/iphoneandjavawebservices.git/iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj</string>
 		<string>D5C8D0040EC94884004E6B91</string>
+		<string>/Users/mccm06/Documents/Teach/Courses/iPhone-and-Java-1Hour/examples/iphoneandjavawebservices.git/iPhoneConsumer-REST-Jersey/IPhoneWSConsumer.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>130 217 1024 641 0 0 1440 878 </string>
@@ -586,14 +567,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>IPhoneWSConsumerViewController.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -610,8 +589,6 @@
 							<string>437pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -651,7 +628,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D5C8D0040EC94884004E6B91</string>
-				<string>D52B33600F86DE2500CBAFE7</string>
+				<string>D52B33850F86E2E600CBAFE7</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -662,7 +639,7 @@
 			<key>WindowToolGUID</key>
 			<string>D5C8D0040EC94884004E6B91</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -771,13 +748,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>D52B33610F86DE2500CBAFE7</string>
+				<string>D52B33860F86E2E600CBAFE7</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>D52B33620F86DE2500CBAFE7</string>
-				<string>D52B33630F86DE2500CBAFE7</string>
-				<string>D52B33640F86DE2500CBAFE7</string>
-				<string>D52B33650F86DE2500CBAFE7</string>
-				<string>D52B33660F86DE2500CBAFE7</string>
+				<string>D52B33870F86E2E600CBAFE7</string>
+				<string>D52B33880F86E2E600CBAFE7</string>
+				<string>D52B33890F86E2E600CBAFE7</string>
+				<string>D52B338A0F86E2E600CBAFE7</string>
+				<string>D52B338B0F86E2E600CBAFE7</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -939,7 +916,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>D52B33670F86DE2500CBAFE7</string>
+				<string>D52B338C0F86E2E600CBAFE7</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

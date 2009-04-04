@@ -87,7 +87,7 @@
       <file leaf-file-name="ContestantDrawing.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ambientideas/iphone/ContestantDrawing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="0" selection-start="2036" selection-end="2036" vertical-scroll-proportion="0.65147454">
+            <state line="68" column="0" selection-start="2036" selection-end="2036" vertical-scroll-proportion="0.07219251">
               <folding />
             </state>
           </provider>
@@ -149,15 +149,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.searchVisible" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="options.searchVisible" value="true" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="RunManagerConfig.showSettingsBeforeRunnig" value="false" />
   </component>
@@ -319,7 +319,7 @@
       <window_info id="Code explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39858156" sideWeight="0.5" order="2" side_tool="false" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997421" sideWeight="0.507837" order="0" side_tool="false" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="FileBrowser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" />
@@ -408,7 +408,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ambientideas/iphone/ContestantDrawing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="2036" selection-end="2036" vertical-scroll-proportion="0.65147454">
+        <state line="68" column="0" selection-start="2036" selection-end="2036" vertical-scroll-proportion="0.07219251">
           <folding />
         </state>
       </provider>
