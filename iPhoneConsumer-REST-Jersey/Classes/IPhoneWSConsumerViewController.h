@@ -26,6 +26,9 @@
 - (IBAction) addContestant:(id) sender;
 - (IBAction) pickWinner:(id) sender;
 
+- (void)initiateRESTAddName:(NSString*) contestantName;
+- (NSString*)initiateRESTPickWinner;
+
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField;
 
 //- (NSString*)pickWinnerWS;

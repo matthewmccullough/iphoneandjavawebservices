@@ -228,7 +228,7 @@ NSString *baseURLString = @"http://Opus.local:9090/drawing/";
  * It can be called multiple times, for example in the case of a
  * redirect, so each time we reset the data.
  */
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response {
 	
     [rawWSData setLength:0];
 	
