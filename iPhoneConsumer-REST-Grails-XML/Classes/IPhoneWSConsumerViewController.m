@@ -46,8 +46,9 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 }
 
 /**
- * A callback, triggered when the XML parser is done (and successful) with retrieving
- * the initial list of existing contestants.
+ * A callback, passed to the asynchronous HTTP call, triggered when the HTTP call is done
+ * (and successful) and we need to parse the XML returned from the HTTP call.
+ * The XML contains the initial list of existing contestants.
  */
 - (void) getInitialContestantsSuccess {
 	InitialContestantsXMLParser* parser = [InitialContestantsXMLParser alloc];
@@ -60,10 +61,15 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 	[parser release];
 }
 
+/**
+ * A callback function, registered with the XML parser, and called each time
+ * a contestant is encountered by the SAX parser.  Add the contestant to
+ * the pickerView
+ */
 - (void) addContestantToListControl:(NSString*) newContestant {
-	//Add to pickerData list control
+	//Add to pickerData data structure, which is backing the pickerView control
 	[self.pickerData addObject:newContestant];
-	//Reload the view to show the new contestant
+	//Reload the pickerView to show the new contestant
 	[self.pckContestants reloadComponent:0];
 }
 
@@ -100,9 +106,10 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 }
 
 /**
- * The RESTful web service success callback handler. Processes the resultant successful add of a
- * name to the contestant pool by adding it to the pickerData list view and setting a status message
- * to indicate the successful add.
+ * The HTTP-call/RESTful web service success callback handler. Processes the resultant successful add of a
+ * name to the contestant pool by parsing the response XML, retriving the successfully added
+ * contestant name, and adding that name to the pickerData data structure that backs the 
+ * pickerView and setting a status message to indicate the successful add.
  */
 - (void) addContestantSuccess {
 	NSLog(@"addContestantSuccess");
@@ -354,7 +361,7 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 }
 
 /**
- * The communication is complete. We can now process the data that was received in chunks.
+ * The HTTP communication is complete. We can now process the data that was received in chunks.
  */
 - (void) connectionDidFinishLoading: (NSURLConnection*) connection {
 	NSLog (@"connectionDidFinishLoading");
@@ -367,6 +374,8 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 		NSLog(@"Web service response: %@", wsTextResponse);
 	}
 	
+	//Call the success selector so that the UI can unlock the UI, parse the response XML, and update
+	// any related data-backed controls.
 	[self performSelector:successSelector];
 	
 	[wsTextResponse release];
@@ -375,7 +384,7 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 }
 
 /**
- * The connection failed with a catastrophic error.
+ * The HTTP connection failed with a catastrophic error.
  */
 -(void) connection:(NSURLConnection *)connection
   didFailWithError: (NSError *)error {
@@ -395,11 +404,4 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 	[errorAlert show];
 	[errorAlert release];
 }
-
-
-
-//////////////////////////////////////////////////////////////////////////
-//XML parsing
-//////////////////////////////////////////////////////////////////////////
-
 @end
