@@ -26,6 +26,7 @@
 @synthesize errorSelector;
 @synthesize successSelector;
 
+//TODO: Make this not global, but owned by the interface
 NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/contestantRESTList/";
 
 /**
@@ -99,6 +100,7 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 	//Register the success callback method
 	successSelector = @selector(addContestantSuccess);
 	
+	//TODO: Extract this to a interface variable for the web service URL
 	NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@", @"http://localhost:8080/restgrails/contestantREST/?name=", txtContestantName.text];
 	[self initiateRESTCall:nil :urlString :@"POST"];
 	
@@ -150,6 +152,7 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 	[activityIndicator startAnimating];
 	
 	successSelector = @selector(pickWinnerRESTSuccess);
+	//TODO: Extract this web service URL to an instance constant
 	[self initiateRESTCall:nil
 						  :@"http://localhost:8080/restgrails/contestantRESTRandom"
 						  :@"GET"];

@@ -18,8 +18,10 @@
 @property(nonatomic, retain) NSMutableString *soapTagData;
 @property(nonatomic, retain) NSXMLParser *xmlParser;
 @property(nonatomic, assign) SEL nameFoundSelector;
-@property(nonatomic, assign) id parentController;
+
+//Changed the parent controller from a IPhoneWSConsumerViewController to an id to reduce warnings
 //@property (nonatomic, assign) IPhoneWSConsumerViewController *parentController;
+@property(nonatomic, assign) id parentController;
 
 -(id) initWithData:(NSData*) rawWSData;
 

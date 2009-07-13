@@ -16,8 +16,6 @@
 	NSMutableData *rawWSData;
 	NSString *wsTextResponse;
 	
-	//BOOL *recordThisTag;
-	
 	SEL errorSelector;
 	SEL successSelector;
 }
@@ -45,7 +43,6 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField;
 
-//- (NSString*)pickWinnerWS;
 @property (retain) UIActivityIndicatorView *activityIndicator;
 @end
 
