@@ -1,3 +1,9 @@
+// The view controller for the main UI of the contestant application.
+// Handles buttons clicks for loading the initial set of contestants
+// via the web service, adding contestants based on button clicks,
+// picking a winner based on a button click and firing the XML
+// parsers for all the inputs and outputs.
+//
 //  Created by Matthew McCullough of Ambient Ideas, LLC on 11/9/08.
 //  Free for any use for any purpose.  No license restrictions.
 
@@ -20,25 +26,29 @@
 @synthesize errorSelector;
 @synthesize successSelector;
 
-//NSString *baseURLString = @"http://localhost:8080/restgrails/contestantsRESTList";
+NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/contestantRESTList/";
 
 /**
- * The button responder when ADD is pressed.
- *
- * Hides the keyboard if it is showing, starts the activity flower animation,
- * registers the success callback, and calls the web service.
+ * When the application is launched, get all the contestants from the web service
+ * to initialize the picker view with.
  */
 - (void) getInitialContestants {
 	
-	//Register the success callback method
+	//Register the success callback method for the XML parser to call
+	// upon each parsing of a "name" tag in the response XML data stream.
 	successSelector = @selector(getInitialContestantsSuccess);
 	
-	NSString *urlString = [[NSString alloc] initWithString:@"http://localhost:8080/restgrails/contestantRESTList/"];
+	//Consider just using the global string, not another allocated one
+	NSString *urlString = [[NSString alloc] initWithString:CONTESTANT_LIST_WEBSERVICE_URL];
 	[self initiateRESTCall:nil :urlString :@"GET"];
 	
 	[urlString release];
 }
 
+/**
+ * A callback, triggered when the XML parser is done (and successful) with retrieving
+ * the initial list of existing contestants.
+ */
 - (void) getInitialContestantsSuccess {
 	InitialContestantsXMLParser* parser = [InitialContestantsXMLParser alloc];
 	parser.nameFoundSelector = @selector(addContestantToListControl:);
@@ -125,9 +135,11 @@
 	[self enableAllButtons: NO];
 	
 	NSLog (@"pickWinner");
+	
 	//Hide the keyboard
 	[txtContestantName resignFirstResponder];
 	
+	//Show that we are busy making the web service call
 	[activityIndicator startAnimating];
 	
 	successSelector = @selector(pickWinnerRESTSuccess);
