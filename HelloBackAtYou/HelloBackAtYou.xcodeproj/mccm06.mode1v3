@@ -326,15 +326,14 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D5137A6C101B87FB002DFE0A</string>
+										<string>D5D78328101CE09B00C0555E</string>
 										<key>history</key>
 										<array>
 											<string>D5137A4B101B87FB002DFE0A</string>
 											<string>D5137A4C101B87FB002DFE0A</string>
-											<string>D5137A4D101B87FB002DFE0A</string>
 											<string>D5137A4E101B87FB002DFE0A</string>
-											<string>D5137A4F101B87FB002DFE0A</string>
-											<string>D5137A50101B87FB002DFE0A</string>
+											<string>D5D78324101CE09B00C0555E</string>
+											<string>D5D78325101CE09B00C0555E</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -342,29 +341,10 @@
 											<string>D5137A52101B87FB002DFE0A</string>
 											<string>D5137A53101B87FB002DFE0A</string>
 											<string>D5137A54101B87FB002DFE0A</string>
-											<string>D5137A55101B87FB002DFE0A</string>
-											<string>D5137A56101B87FB002DFE0A</string>
-											<string>D5137A57101B87FB002DFE0A</string>
-											<string>D5137A58101B87FB002DFE0A</string>
 											<string>D5137A59101B87FB002DFE0A</string>
-											<string>D5137A5A101B87FB002DFE0A</string>
 											<string>D5137A5B101B87FB002DFE0A</string>
-											<string>D5137A5C101B87FB002DFE0A</string>
-											<string>D5137A5D101B87FB002DFE0A</string>
-											<string>D5137A5E101B87FB002DFE0A</string>
-											<string>D5137A5F101B87FB002DFE0A</string>
-											<string>D5137A60101B87FB002DFE0A</string>
-											<string>D5137A61101B87FB002DFE0A</string>
-											<string>D5137A62101B87FB002DFE0A</string>
-											<string>D5137A63101B87FB002DFE0A</string>
-											<string>D5137A64101B87FB002DFE0A</string>
-											<string>D5137A65101B87FB002DFE0A</string>
-											<string>D5137A66101B87FB002DFE0A</string>
-											<string>D5137A67101B87FB002DFE0A</string>
-											<string>D5137A68101B87FB002DFE0A</string>
-											<string>D5137A69101B87FB002DFE0A</string>
-											<string>D5137A6A101B87FB002DFE0A</string>
-											<string>D5137A6B101B87FB002DFE0A</string>
+											<string>D5D78326101CE09B00C0555E</string>
+											<string>D5D78327101CE09B00C0555E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -422,9 +402,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D5137A6D101B87FB002DFE0A</string>
+				<string>D5D782FA101CDF1700C0555E</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D5137A6E101B87FB002DFE0A</string>
+				<string>D5D782FB101CDF1700C0555E</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -558,12 +538,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D5137A79101B87FB002DFE0A</string>
-		<string>D5137A7A101B87FB002DFE0A</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>D5137A70101B87FB002DFE0A</string>
-		<string>/Users/mccm06/Documents/Temp/Scratch/HelloBackAtYou/HelloBackAtYou.xcodeproj</string>
+		<string>/Users/mccm06/Documents/Teach/Courses/iPhone-and-Java-1Hour/examples/iphoneandjavawebservices_git/HelloBackAtYou/HelloBackAtYou.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>5 55 1436 823 0 0 1440 878 </string>
@@ -685,8 +661,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {316, 185}}</string>
-											<string>{{316, 0}, {378, 185}}</string>
+											<string>{{0, 0}, {316, 194}}</string>
+											<string>{{316, 0}, {378, 194}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -701,8 +677,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {694, 185}}</string>
-											<string>{{0, 185}, {694, 196}}</string>
+											<string>{{0, 0}, {694, 194}}</string>
+											<string>{{0, 194}, {694, 187}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -735,7 +711,7 @@
 										<real>148</real>
 									</array>
 									<key>Frame</key>
-									<string>{{316, 0}, {378, 185}}</string>
+									<string>{{316, 0}, {378, 194}}</string>
 									<key>RubberWindowFrame</key>
 									<string>25 433 694 422 0 0 1440 878 </string>
 								</dict>
@@ -763,13 +739,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>D5137A72101B87FB002DFE0A</string>
+				<string>D5D78329101CE09B00C0555E</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>D5137A73101B87FB002DFE0A</string>
-				<string>D5137A74101B87FB002DFE0A</string>
-				<string>D5137A75101B87FB002DFE0A</string>
-				<string>D5137A76101B87FB002DFE0A</string>
-				<string>D5137A77101B87FB002DFE0A</string>
+				<string>D5D7832A101CE09B00C0555E</string>
+				<string>D5D7832B101CE09B00C0555E</string>
+				<string>D5D7832C101CE09B00C0555E</string>
+				<string>D5D7832D101CE09B00C0555E</string>
+				<string>D5D7832E101CE09B00C0555E</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>

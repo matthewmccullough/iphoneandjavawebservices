@@ -6,10 +6,11 @@ class ContestantRESTController {
     
     def randomREST = {
         //curl http://localhost:8080/restgrails/contestantRESTRandom
-        def contestant = null
-        while (contestant == null) {
-            contestant = Contestant.get(new Random().nextInt(Contestant.list().size+1))
-        }
+        def contestant;
+        println "Contestant list size: " + Contestant.list().size;
+        int rndContestant = new Random().nextInt(Contestant.list().size);
+        println "Random contestant: " + rndContestant;
+        contestant = Contestant.list().get(rndContestant)
         
         render contestant as XML 
     }
