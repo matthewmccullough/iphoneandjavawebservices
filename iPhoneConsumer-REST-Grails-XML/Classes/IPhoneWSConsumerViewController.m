@@ -20,11 +20,7 @@
 
 @synthesize pickerData;
 
-@synthesize rawWSData;
-@synthesize wsTextResponse;
-
-@synthesize errorSelector;
-@synthesize successSelector;
+@synthesize webServiceProcessor;
 
 //TODO: Make this not global, but owned by the interface
 NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/contestantRESTList/";
@@ -37,7 +33,7 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 	
 	//Register the success callback method for the XML parser to call
 	// upon each parsing of a "name" tag in the response XML data stream.
-	successSelector = @selector(getInitialContestantsSuccess);
+	webServiceProcessor.successSelector = @selector(getInitialContestantsSuccess);
 	
 	//Consider just using the global string, not another allocated one
 	NSString *urlString = [[NSString alloc] initWithString:CONTESTANT_LIST_WEBSERVICE_URL];
@@ -52,13 +48,15 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
  * The XML contains the initial list of existing contestants.
  */
 - (void) getInitialContestantsSuccess {
+	[activityIndicator stopAnimating];
+	
 	InitialContestantsXMLParser* parser = [InitialContestantsXMLParser alloc];
 	parser.nameFoundSelector = @selector(addContestantToListControl:);
 	parser.parentController = self;
 	//NSLog(@"about to handoff selector %@ to id %@", parser.nameFoundSelector, parser.parentController);
-	[parser initWithData:rawWSData];
+	[parser initWithData:webServiceProcessor.rawWSData];
 	
-	self.wsTextResponse = parser.soapTagData;
+	webServiceProcessor.wsTextResponse = parser.soapTagData;
 	[parser release];
 }
 
@@ -81,7 +79,7 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
  * registers the success callback, and calls the web service.
  */
 - (IBAction) addContestant:(id) sender {
-	NSLog (@"addContestant");
+	NSLog (@"Adding Contestant");
 	
 	[self enableAllButtons: NO];
 	
@@ -98,7 +96,7 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 	}
 	
 	//Register the success callback method
-	successSelector = @selector(addContestantSuccess);
+	webServiceProcessor.successSelector = @selector(addContestantSuccess);
 	
 	//TODO: Extract this to a interface variable for the web service URL
 	NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@", @"http://localhost:8080/restgrails/contestantREST/?name=", txtContestantName.text];
@@ -116,15 +114,17 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 - (void) addContestantSuccess {
 	NSLog(@"addContestantSuccess");
 	
+	[activityIndicator stopAnimating];
+	
 	lblStatus.text = [[NSString alloc] initWithFormat:@"Contestant added: %@!", txtContestantName.text];
 	
 	ContestantAddXMLParser* parser = [ContestantAddXMLParser alloc];
-	[parser initWithData:rawWSData];
-	self.wsTextResponse = parser.soapTagData;
+	[parser initWithData:webServiceProcessor. rawWSData];
+	webServiceProcessor.wsTextResponse = parser.soapTagData;
 	[parser release];
 
 	//Add to pickerData list control
-	[self.pickerData addObject:wsTextResponse];
+	[self.pickerData addObject:webServiceProcessor.wsTextResponse];
 	//Reload the view to show the new contestant
 	[self.pckContestants reloadComponent:0];
 	
@@ -151,7 +151,7 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 	//Show that we are busy making the web service call
 	[activityIndicator startAnimating];
 	
-	successSelector = @selector(pickWinnerRESTSuccess);
+	webServiceProcessor.successSelector = @selector(pickWinnerRESTSuccess);
 	//TODO: Extract this web service URL to an instance constant
 	[self initiateRESTCall:nil
 						  :@"http://localhost:8080/restgrails/contestantRESTRandom"
@@ -166,12 +166,14 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 - (void) pickWinnerRESTSuccess {
 	NSLog(@"getWinnerSuccess");
 	
+	[activityIndicator stopAnimating];
+	
 	ContestantAddXMLParser* parser = [ContestantAddXMLParser alloc];
-	[parser initWithData:rawWSData];
-	self.wsTextResponse = parser.soapTagData;
+	[parser initWithData:webServiceProcessor.rawWSData];
+	webServiceProcessor.wsTextResponse = parser.soapTagData;
 	[parser release];
 	
-	NSString *winner = [[NSString alloc] initWithFormat:@"Winner is: %@", self.wsTextResponse];
+	NSString *winner = [[NSString alloc] initWithFormat:@"Winner is: %@", webServiceProcessor.wsTextResponse];
 	lblStatus.text = winner;
 	[winner release];
 	
@@ -180,7 +182,7 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 	NSString *currentString = nil;
 	for (rowForWinningContestant = 0; rowForWinningContestant < [pickerData count]; rowForWinningContestant++) {
 		currentString = [pickerData objectAtIndex:rowForWinningContestant];
-		if ([currentString isEqualToString:self.wsTextResponse]) {
+		if ([currentString isEqualToString:webServiceProcessor.wsTextResponse]) {
 			[pckContestants selectRow:rowForWinningContestant inComponent:0 animated:YES];
 		}
 	}
@@ -228,6 +230,9 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 	self.pickerData = array;
 	[array release];
 	[activityIndicator stopAnimating];
+	
+	webServiceProcessor = [[WebServiceProcessor alloc] init];
+	webServiceProcessor.viewController = self;
 	
 	//Load the existing names from the web service
 	[self getInitialContestants];
@@ -298,113 +303,12 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 	//Asynchronous.
 	//Connection returned from this call will be released upon error or success async methods.
 	[[NSURLConnection alloc] initWithRequest:req
-									delegate:self];
+									delegate:webServiceProcessor];
 	
 	//Allocate a NSMutableData to contain all the data chunks we'll receive from the WS
-	rawWSData = [[NSMutableData data] retain];
+	webServiceProcessor.rawWSData = [[NSMutableData data] retain];
 
 	[url release];
 }
 
-
-////////////////////////////////////////////////////////////////////////////////////
-// HTTP Communication Callbacks
-///////////////////////////////////////////////////////////////////////////////////
-
-/**
- * APPLE DOCUMENTATION:
- * This method is called when the server has determined that it
- * has enough information to create an NSURLResponse.
- *
- * It can be called multiple times, for example in the case of a
- * redirect, so each time we reset the data.
- */
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response {
-	
-    [rawWSData setLength:0];
-	
-	NSLog (@"connectionDidReceiveResponse");
-	
-	//////////////////////////////////////////////////////////////////
-	// Check the response code for any HTTP connectivity errors
-	//////////////////////////////////////////////////////////////////
-	NSLog(@"Response Code: %d", [response statusCode]);
-	NSLog(@"Content-Type: %@", [[response allHeaderFields] objectForKey:@"Content-Type"]);
-
-	//Good response codes are 200 through 299
-	if ([response statusCode] >= 200 && [response statusCode] < 300 && [response statusCode] != 204) {
-		//Call was successful
-		NSLog(@"Web service call deemed successful based on status code.");
-	}
-	else {
-		//Bad response codes are 204 (null payload) and 400 series
-		
-		//Build and show an alert dialog (overlay)
-		UIAlertView *errorAlert = [[UIAlertView alloc]
-								   initWithTitle: @"Error"
-								   message: [[NSString alloc] initWithFormat:@"Error in Web Service call. Response code %d", [response statusCode]]
-								   delegate:nil
-								   cancelButtonTitle:@"OK"
-								   otherButtonTitles:nil];
-		[errorAlert show];
-		[errorAlert release];
-	}
-}
-
-/**
- * We received a chunk of data (but not guaranteed to be all of it).
- * Append to our data buffer.
- * Can be used to indicate progress to the user.
- */
-- (void)connection:(NSURLConnection *)connection
-	didReceiveData:(NSData *)data {
-	NSLog (@"connectionDidReceiveData");
-	
-	[rawWSData appendData:data];
-}
-
-/**
- * The HTTP communication is complete. We can now process the data that was received in chunks.
- */
-- (void) connectionDidFinishLoading: (NSURLConnection*) connection {
-	NSLog (@"connectionDidFinishLoading");
-	[activityIndicator stopAnimating];
-
-	wsTextResponse = [[NSString alloc]
-						 initWithData:rawWSData
-						 encoding:NSUTF8StringEncoding];
-	if (wsTextResponse != NULL) {
-		NSLog(@"Web service response: %@", wsTextResponse);
-	}
-	
-	//Call the success selector so that the UI can unlock the UI, parse the response XML, and update
-	// any related data-backed controls.
-	[self performSelector:successSelector];
-	
-	[wsTextResponse release];
-	[connection release];
-    [rawWSData release];
-}
-
-/**
- * The HTTP connection failed with a catastrophic error.
- */
--(void) connection:(NSURLConnection *)connection
-  didFailWithError: (NSError *)error {
-	[activityIndicator stopAnimating];
-	NSLog (@"Connection Failed with Error");
-	
-	[connection release];
-	[rawWSData release];
-	
-	//Build and show an error message
-	UIAlertView *errorAlert = [[UIAlertView alloc]
-							   initWithTitle: [error localizedDescription]
-							   message: [error localizedFailureReason]
-							   delegate:nil
-							   cancelButtonTitle:@"OK"
-							   otherButtonTitles:nil];
-	[errorAlert show];
-	[errorAlert release];
-}
 @end

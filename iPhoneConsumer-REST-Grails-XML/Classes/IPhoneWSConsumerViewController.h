@@ -2,6 +2,7 @@
 //  Free for any use for any purpose.  No license restrictions.
 
 #import <UIKit/UIKit.h>
+#import "WebServiceProcessor.h"
 
 @interface IPhoneWSConsumerViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
 	IBOutlet UITextField *txtContestantName;
@@ -13,11 +14,7 @@
 
 	NSMutableArray *pickerData;
 	
-	NSMutableData *rawWSData;
-	NSString *wsTextResponse;
-	
-	SEL errorSelector;
-	SEL successSelector;
+	WebServiceProcessor *webServiceProcessor;
 }
 	
 @property(nonatomic, retain) IBOutlet UITextField *txtContestantName;
@@ -28,11 +25,7 @@
 
 @property(nonatomic, retain) NSMutableArray *pickerData;
 
-@property(nonatomic, retain) NSMutableData *rawWSData;
-@property(nonatomic, retain) NSString *wsTextResponse;
-
-@property(nonatomic, assign) SEL errorSelector;
-@property(nonatomic, assign) SEL successSelector;
+@property(nonatomic, assign) WebServiceProcessor *webServiceProcessor;
 
 - (IBAction) addContestant:(id) sender;
 - (IBAction) pickWinner:(id) sender;

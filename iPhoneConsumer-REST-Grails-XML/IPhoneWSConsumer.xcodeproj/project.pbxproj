@@ -17,6 +17,7 @@
 		28D7ACF80DDB3853001CB0EB /* IPhoneWSConsumerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */; };
 		D521A3B2101B4A7800C07242 /* NFJS iPhone App Background.png in Resources */ = {isa = PBXBuildFile; fileRef = D521A3B0101B4A7800C07242 /* NFJS iPhone App Background.png */; };
 		D521A3B3101B4A7800C07242 /* NFJSLogo iPhone App Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D521A3B1101B4A7800C07242 /* NFJSLogo iPhone App Icon.png */; };
+		D53161FC101D58C00079EDE6 /* WebServiceProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */; };
 		D58C59250F6CD62900A1977D /* InitialContestantsXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C59240F6CD62900A1977D /* InitialContestantsXMLParser.m */; };
 		D58C59280F6CD6A900A1977D /* ContestantAddXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C59270F6CD6A900A1977D /* ContestantAddXMLParser.m */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,8 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D521A3B0101B4A7800C07242 /* NFJS iPhone App Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NFJS iPhone App Background.png"; sourceTree = "<group>"; };
 		D521A3B1101B4A7800C07242 /* NFJSLogo iPhone App Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NFJSLogo iPhone App Icon.png"; sourceTree = "<group>"; };
+		D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceProcessor.h; sourceTree = "<group>"; };
+		D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceProcessor.m; sourceTree = "<group>"; };
 		D58C59230F6CD62900A1977D /* InitialContestantsXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialContestantsXMLParser.h; sourceTree = "<group>"; };
 		D58C59240F6CD62900A1977D /* InitialContestantsXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialContestantsXMLParser.m; sourceTree = "<group>"; };
 		D58C59260F6CD6A900A1977D /* ContestantAddXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContestantAddXMLParser.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				D58C59240F6CD62900A1977D /* InitialContestantsXMLParser.m */,
 				D58C59260F6CD6A900A1977D /* ContestantAddXMLParser.h */,
 				D58C59270F6CD6A900A1977D /* ContestantAddXMLParser.m */,
+				D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */,
+				D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				28D7ACF80DDB3853001CB0EB /* IPhoneWSConsumerViewController.m in Sources */,
 				D58C59250F6CD62900A1977D /* InitialContestantsXMLParser.m in Sources */,
 				D58C59280F6CD6A900A1977D /* ContestantAddXMLParser.m in Sources */,
+				D53161FC101D58C00079EDE6 /* WebServiceProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
