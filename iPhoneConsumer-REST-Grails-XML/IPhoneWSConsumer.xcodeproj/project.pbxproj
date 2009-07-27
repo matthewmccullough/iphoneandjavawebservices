@@ -194,6 +194,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew McCullough (7V252G2VX5)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -201,6 +202,7 @@
 				GCC_PREFIX_HEADER = IPhoneWSConsumer_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = IPhoneWSConsumer;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "56E88C2C-57AC-4BBB-AA74-E1FF323FB595";
 			};
 			name = Debug;
 		};
@@ -208,11 +210,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew McCullough (7V252G2VX5)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = IPhoneWSConsumer_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = IPhoneWSConsumer;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "56E88C2C-57AC-4BBB-AA74-E1FF323FB595";
 			};
 			name = Release;
 		};
@@ -262,7 +266,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew McCullough";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew McCullough";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew McCullough (7V252G2VX5)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -271,7 +275,7 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = IPhoneWSConsumer;
 				PROVISIONING_PROFILE = DefaultProfileUuid;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "43CE3304-E0FC-462F-B20C-B3F2E56932EA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "56E88C2C-57AC-4BBB-AA74-E1FF323FB595";
 			};
 			name = "Debug on Phone";
 		};
