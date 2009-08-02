@@ -219,7 +219,42 @@ static NSString * const RANDOM_CONTESTANT_WEBSERVICE_URL = @"http://localhost:80
 	[self enableAllButtons: YES];
 }
 
+//////////////////////////////////////////////////////////////////////////
+// A people-picker control for the contestant name
+//////////////////////////////////////////////////////////////////////////
+- (IBAction)showPeoplePicker:(id)sender
+{
+    ABPeoplePickerNavigationController *peoplePickerController = [[ABPeoplePickerNavigationController alloc] init];
+    peoplePickerController.peoplePickerDelegate = self;
+    
+    [self presentModalViewController:peoplePickerController animated:YES];
+    
+    [peoplePickerController release];
+}
 
+- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
+{
+    NSString *name = (NSString *)ABRecordCopyCompositeName(person);
+    txtContestantName.text = [name autorelease];
+    
+    [self dismissModalViewControllerAnimated:YES];    
+    
+    return NO;
+}
+
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier
+{
+    return NO;
+}
+
+/////////////////////////////////////////////////////////////////////////
+// UI Utility Methods
+////////////////////////////////////////////////////////////////////////
 /**
  * Utility method to enable or disable all the UI buttons. Useful to block further input on 
  * the UI until a web service call has come back as successful or unsuccessful.
@@ -297,7 +332,9 @@ static NSString * const RANDOM_CONTESTANT_WEBSERVICE_URL = @"http://localhost:80
 {
 	[activityIndicator startAnimating];
 	
-	NSURL *url = [[NSURL alloc] initWithString:urlString];
+	NSString *escapedUrlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	
+	NSURL *url = [[NSURL alloc] initWithString:escapedUrlString];
 	
 	//****** DANGER *******
 	//NOTE: initWithURL can only be called on an alloced request; requestWithURL allocs and sets up.
@@ -317,6 +354,7 @@ static NSString * const RANDOM_CONTESTANT_WEBSERVICE_URL = @"http://localhost:80
 	webServiceProcessor.rawWSData = [[NSMutableData data] retain];
 
 	[url release];
+	//[escapedUrlString release];
 }
 
 @end

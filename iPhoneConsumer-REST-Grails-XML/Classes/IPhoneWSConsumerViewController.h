@@ -2,9 +2,10 @@
 //  Free for any use for any purpose.  No license restrictions.
 
 #import <UIKit/UIKit.h>
+#import <AddressBookUI/AddressBookUI.h>
 #import "WebServiceProcessor.h"
 
-@interface IPhoneWSConsumerViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
+@interface IPhoneWSConsumerViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, ABPeoplePickerNavigationControllerDelegate> {
 	IBOutlet UITextField *txtContestantName;
 	IBOutlet UILabel *lblStatus;
 	IBOutlet UIPickerView *pckContestants;
@@ -36,6 +37,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField;
 - (void) getInitialContestants;
+- (IBAction)showPeoplePicker:(id)sender;
 
 @property (retain) UIActivityIndicatorView *activityIndicator;
 @end

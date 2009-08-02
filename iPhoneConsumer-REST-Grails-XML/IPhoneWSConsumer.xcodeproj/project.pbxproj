@@ -20,6 +20,8 @@
 		D53161FC101D58C00079EDE6 /* WebServiceProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */; };
 		D58C59250F6CD62900A1977D /* InitialContestantsXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C59240F6CD62900A1977D /* InitialContestantsXMLParser.m */; };
 		D58C59280F6CD6A900A1977D /* ContestantAddXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C59270F6CD6A900A1977D /* ContestantAddXMLParser.m */; };
+		D5D9E168102614CD0080ACDE /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D9E167102614CD0080ACDE /* AddressBook.framework */; };
+		D5D9E17B1026154D0080ACDE /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D9E17A1026154D0080ACDE /* AddressBookUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		D58C59240F6CD62900A1977D /* InitialContestantsXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialContestantsXMLParser.m; sourceTree = "<group>"; };
 		D58C59260F6CD6A900A1977D /* ContestantAddXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContestantAddXMLParser.h; sourceTree = "<group>"; };
 		D58C59270F6CD6A900A1977D /* ContestantAddXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContestantAddXMLParser.m; sourceTree = "<group>"; };
+		D5D9E167102614CD0080ACDE /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
+		D5D9E17A1026154D0080ACDE /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				D5D9E168102614CD0080ACDE /* AddressBook.framework in Frameworks */,
+				D5D9E17B1026154D0080ACDE /* AddressBookUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +99,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				D5D9E17A1026154D0080ACDE /* AddressBookUI.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5D9E167102614CD0080ACDE /* AddressBook.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,

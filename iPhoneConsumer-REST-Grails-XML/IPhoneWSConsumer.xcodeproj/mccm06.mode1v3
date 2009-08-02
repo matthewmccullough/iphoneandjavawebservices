@@ -267,6 +267,7 @@
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
+								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
@@ -276,7 +277,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>4</integer>
+									<integer>5</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -319,7 +320,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>IPhoneWSConsumerViewController.h</string>
+								<string>IPhoneWSConsumerViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,11 +328,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>IPhoneWSConsumerViewController.h</string>
+										<string>IPhoneWSConsumerViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D5D9E13110260D560080ACDE</string>
+										<string>D5FC8353102628A700224FD4</string>
 										<key>history</key>
 										<array>
 											<string>D5DBA1460F1D98270078F00E</string>
@@ -342,16 +343,16 @@
 											<string>D5006C890F6CEEA1005F6FDD</string>
 											<string>D5006C8B0F6CEEA1005F6FDD</string>
 											<string>D55560D2100AC1480012CFB8</string>
-											<string>D53162C2101DECDE0079EDE6</string>
 											<string>D58060C7102602C7005C1155</string>
-											<string>D5D9E12210260D560080ACDE</string>
 											<string>D5D9E12310260D560080ACDE</string>
 											<string>D5D9E12410260D560080ACDE</string>
-											<string>D5D9E12510260D560080ACDE</string>
 											<string>D5D9E12610260D560080ACDE</string>
 											<string>D5D9E12710260D560080ACDE</string>
 											<string>D5D9E12810260D560080ACDE</string>
-											<string>D5D9E10410260C650080ACDE</string>
+											<string>D5D9E181102615720080ACDE</string>
+											<string>D5D9E182102615720080ACDE</string>
+											<string>D5D9E1A31026196E0080ACDE</string>
+											<string>D5D9E1D7102625D70080ACDE</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -373,22 +374,6 @@
 											<string>D5006C990F6CEEA1005F6FDD</string>
 											<string>D5316231101D5E7A0079EDE6</string>
 											<string>D5316233101D5E7A0079EDE6</string>
-											<string>D5D9E0FE10260C020080ACDE</string>
-											<string>D5D9E0FF10260C020080ACDE</string>
-											<string>D5D9E10010260C020080ACDE</string>
-											<string>D5D9E10510260C650080ACDE</string>
-											<string>D5D9E10A10260C810080ACDE</string>
-											<string>D5D9E11310260CC10080ACDE</string>
-											<string>D5D9E11410260CC10080ACDE</string>
-											<string>D5D9E12010260CDC0080ACDE</string>
-											<string>D5D9E12910260D560080ACDE</string>
-											<string>D5D9E12A10260D560080ACDE</string>
-											<string>D5D9E12B10260D560080ACDE</string>
-											<string>D5D9E12C10260D560080ACDE</string>
-											<string>D5D9E12D10260D560080ACDE</string>
-											<string>D5D9E12E10260D560080ACDE</string>
-											<string>D5D9E12F10260D560080ACDE</string>
-											<string>D5D9E13010260D560080ACDE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -446,9 +431,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D5D9E0ED10260B350080ACDE</string>
+				<string>D5FC8354102628A700224FD4</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D5D9E0EE10260B350080ACDE</string>
+				<string>D5FC8355102628A700224FD4</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -582,10 +567,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D5C8D0040EC94884004E6B91</string>
-		<string>D5D9E0F310260B3D0080ACDE</string>
-		<string>D5D9E0F410260B3D0080ACDE</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/mccm06/Documents/Teach/Courses/iPhone-and-Java-1Hour/examples/iphoneandjavawebservices_git/iPhoneConsumer-REST-Grails-XML/IPhoneWSConsumer.xcodeproj</string>
 	</array>
@@ -606,14 +587,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>InitialContestantsXMLParser.m</string>
+								<string>IPhoneWSConsumerViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -630,6 +609,8 @@
 							<string>584pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -763,10 +744,10 @@
 									<key>Frame</key>
 									<string>{{460, 0}, {548, 278}}</string>
 									<key>RubberWindowFrame</key>
-									<string>259 177 1008 563 0 0 1440 878 </string>
+									<string>225 157 1008 563 0 0 1440 878 </string>
 								</dict>
 								<key>RubberWindowFrame</key>
-								<string>259 177 1008 563 0 0 1440 878 </string>
+								<string>225 157 1008 563 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugSessionModule</string>
@@ -789,18 +770,18 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>D5D9E0E410260B300080ACDE</string>
+				<string>D5FC834D1026288E00224FD4</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>D5D9E0E510260B300080ACDE</string>
-				<string>D5D9E0E610260B300080ACDE</string>
-				<string>D5D9E0E710260B300080ACDE</string>
-				<string>D5D9E0E810260B300080ACDE</string>
-				<string>D5D9E0E910260B300080ACDE</string>
+				<string>D5FC834E1026288E00224FD4</string>
+				<string>D5FC834F1026288E00224FD4</string>
+				<string>D5FC83501026288E00224FD4</string>
+				<string>D5FC83511026288E00224FD4</string>
+				<string>D5FC83521026288E00224FD4</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
 			<key>WindowString</key>
-			<string>259 177 1008 563 0 0 1440 878 </string>
+			<string>225 157 1008 563 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
