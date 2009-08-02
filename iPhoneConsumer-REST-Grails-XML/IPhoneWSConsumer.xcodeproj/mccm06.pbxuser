@@ -22,17 +22,17 @@
 	};
 	28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {998, 798}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1192, 798}}";
 			sepNavSelRange = "{609, 0}";
-			sepNavVisRange = "{157, 1182}";
+			sepNavVisRange = "{372, 1030}";
 			sepNavWindowFrame = "{{148, 56}, {750, 822}}";
 		};
 	};
 	28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {998, 5662}}";
-			sepNavSelRange = "{3336, 0}";
-			sepNavVisRange = "{0, 1328}";
+			sepNavIntBoundsRect = "{{0, 0}, {1192, 6105}}";
+			sepNavSelRange = "{2068, 32}";
+			sepNavVisRange = "{1656, 1027}";
 			sepNavWindowFrame = "{{320, 184}, {947, 694}}";
 		};
 	};
@@ -46,7 +46,7 @@
 		);
 		breakpoints = (
 			D52CC16C0F0DFAAE00D9FD15 /* AIWSObject.m:124 */,
-			D5BA98390FD381C300DF9458 /* IPhoneWSConsumerViewController.m:127 */,
+			D5BA98390FD381C300DF9458 /* IPhoneWSConsumerViewController.m:156 */,
 			D5BA983B0FD3821800DF9458 /* InitialContestantsXMLParser.m:93 */,
 		);
 		codeSenseManager = D5C8CFF10EC94062004E6B91 /* Code sense */;
@@ -425,7 +425,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		name = "IPhoneWSConsumerViewController.m: 305";
 		rLen = 15;
-		rLoc = 10068;
+		rLoc = 10475;
 		rType = 0;
 		vrLen = 954;
 		vrLoc = 4815;
@@ -445,7 +445,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		name = "IPhoneWSConsumerViewController.m: 24";
 		rLen = 0;
-		rLoc = 1163;
+		rLoc = 1842;
 		rType = 0;
 		vrLen = 1198;
 		vrLoc = 696;
@@ -485,7 +485,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		name = "IPhoneWSConsumerViewController.m: 145";
 		rLen = 0;
-		rLoc = 5182;
+		rLoc = 6074;
 		rType = 0;
 		vrLen = 932;
 		vrLoc = 4862;
@@ -676,9 +676,9 @@
 	};
 	D58C59240F6CD62900A1977D /* InitialContestantsXMLParser.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {998, 2356}}";
-			sepNavSelRange = "{654, 0}";
-			sepNavVisRange = "{214, 733}";
+			sepNavIntBoundsRect = "{{0, 0}, {1192, 2071}}";
+			sepNavSelRange = "{411, 0}";
+			sepNavVisRange = "{0, 689}";
 			sepNavWindowFrame = "{{50, 95}, {937, 651}}";
 		};
 	};
@@ -811,7 +811,7 @@
 		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator2.2.sdk/System/Library/Frameworks/Foundation.framework/Versions/C/Headers/NSURLConnection.h;
 		sourceTree = "<absolute>";
 	};
-	D5BA98390FD381C300DF9458 /* IPhoneWSConsumerViewController.m:127 */ = {
+	D5BA98390FD381C300DF9458 /* IPhoneWSConsumerViewController.m:156 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -823,7 +823,7 @@
 		functionName = "-addContestantSuccess";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 127;
+		lineNumber = 156;
 		location = IPhoneWSConsumer;
 		modificationTime = 270929095.343961;
 		state = 2;
@@ -929,7 +929,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		name = "IPhoneWSConsumerViewController.m: 139";
 		rLen = 0;
-		rLoc = 4964;
+		rLoc = 5856;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 4862;
@@ -939,7 +939,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		name = "IPhoneWSConsumerViewController.m: 139";
 		rLen = 0;
-		rLoc = 4964;
+		rLoc = 5856;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 4862;
@@ -977,7 +977,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		name = "IPhoneWSConsumerViewController.m: 39";
 		rLen = 0;
-		rLoc = 1609;
+		rLoc = 2384;
 		rType = 0;
 		vrLen = 1219;
 		vrLoc = 614;
@@ -1194,7 +1194,7 @@
 		isa = PBXTextBookmark;
 		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		rLen = 0;
-		rLoc = 82;
+		rLoc = 111;
 		rType = 1;
 	};
 	D5D9E12010260CDC0080ACDE /* PBXTextBookmark */ = {
@@ -1212,7 +1212,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		name = "IPhoneWSConsumerViewController.m: 83";
 		rLen = 0;
-		rLoc = 3208;
+		rLoc = 4100;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 2689;
@@ -1252,7 +1252,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		name = "IPhoneWSConsumerViewController.m: 88";
 		rLen = 0;
-		rLoc = 3336;
+		rLoc = 4228;
 		rType = 0;
 		vrLen = 1328;
 		vrLoc = 0;
@@ -1292,7 +1292,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		name = "IPhoneWSConsumerViewController.m: 88";
 		rLen = 0;
-		rLoc = 3336;
+		rLoc = 4228;
 		rType = 0;
 		vrLen = 1328;
 		vrLoc = 0;
@@ -1332,7 +1332,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		name = "IPhoneWSConsumerViewController.m: 88";
 		rLen = 0;
-		rLoc = 3336;
+		rLoc = 4228;
 		rType = 0;
 		vrLen = 1328;
 		vrLoc = 0;

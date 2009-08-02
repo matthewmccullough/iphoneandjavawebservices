@@ -27,8 +27,34 @@ static NSString * const ADD_CONTESTANT_WEBSERVICE_URL = @"http://localhost:8080/
 static NSString * const RANDOM_CONTESTANT_WEBSERVICE_URL = @"http://localhost:8080/restgrails/contestantRESTRandom";
 
 /**
- * When the application is launched, get all the contestants from the web service
+ * When the application is launched...
+ *
+ * 1) Load the initial empty array for contestants in the pickerView
+ * 2) Stop the activity animation (flower)
+ * 3) Initialize the web service handler
+ * 4) Call the web service and get all the contestants for the pickerview.
+ */
+- (void)viewDidLoad 
+{
+	NSLog (@"viewDidLoad was called");
+	NSMutableArray *array  = [[NSMutableArray alloc] initWithObjects: nil];
+	self.pickerData = array;
+	[array release];
+	[activityIndicator stopAnimating];
+	
+	webServiceProcessor = [[WebServiceProcessor alloc] init];
+	webServiceProcessor.viewController = self;
+	
+	//Load the existing names from the web service
+	[self getInitialContestants];
+}
+
+/**
+ * Utility method to get all the contestants from the web service
  * to initialize the picker view with.
+ *
+ * Set a selector of getInitialContestantsSuccess (callback) when the
+ * web service succeeds and completes.
  */
 - (void) getInitialContestants {
 	
@@ -47,6 +73,9 @@ static NSString * const RANDOM_CONTESTANT_WEBSERVICE_URL = @"http://localhost:80
  * A callback, passed to the asynchronous HTTP call, triggered when the HTTP call is done
  * (and successful) and we need to parse the XML returned from the HTTP call.
  * The XML contains the initial list of existing contestants.
+ *
+ * Provide the XML parser with a callback to the UI for add each parsed contestant
+ * to the pickerview control.
  */
 - (void) getInitialContestantsSuccess {
 	[activityIndicator stopAnimating];
@@ -64,7 +93,7 @@ static NSString * const RANDOM_CONTESTANT_WEBSERVICE_URL = @"http://localhost:80
 /**
  * A callback function, registered with the XML parser, and called each time
  * a contestant is encountered by the SAX parser.  Add the contestant to
- * the pickerView
+ * the pickerView.
  */
 - (void) addContestantToListControl:(NSString*) newContestant {
 	//Add to pickerData data structure, which is backing the pickerView control
@@ -191,12 +220,8 @@ static NSString * const RANDOM_CONTESTANT_WEBSERVICE_URL = @"http://localhost:80
 }
 
 
-//////////////////////////////////////////////////////////////////
-// UI Methods
-//////////////////////////////////////////////////////////////////
-
 /**
- * Enable or disable the buttons. Useful to block further input on 
+ * Utility method to enable or disable all the UI buttons. Useful to block further input on 
  * the UI until a web service call has come back as successful or unsuccessful.
  */
 - (void)enableAllButtons:(BOOL) enable
@@ -206,11 +231,12 @@ static NSString * const RANDOM_CONTESTANT_WEBSERVICE_URL = @"http://localhost:80
 }
 
 /**
- * Release the keyboard display (hide it)
+ * Interface method to release the keyboard display (hide it) when it is
+ * no longer needed (focus shifts away from the input field)
  */
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField 
 {
-	NSLog (@"textFieldShouldReturn");
+	NSLog (@"textFieldShouldReturn was called");
 	[theTextField resignFirstResponder];
 	return YES;
 }
@@ -219,24 +245,6 @@ static NSString * const RANDOM_CONTESTANT_WEBSERVICE_URL = @"http://localhost:80
 ////////////////////////////////////////////////////////////////////////////
 // Picker View (Table of Contestants)
 ////////////////////////////////////////////////////////////////////////////
-
-/**
- * Load the initial empty array for contestants in the pickerView
- */
-- (void)viewDidLoad 
-{
-	NSLog (@"viewDidLoad");
-	NSMutableArray *array  = [[NSMutableArray alloc] initWithObjects: nil];
-	self.pickerData = array;
-	[array release];
-	[activityIndicator stopAnimating];
-	
-	webServiceProcessor = [[WebServiceProcessor alloc] init];
-	webServiceProcessor.viewController = self;
-	
-	//Load the existing names from the web service
-	[self getInitialContestants];
-}
 
 /**
  * How many columns. Just 1 at this time.

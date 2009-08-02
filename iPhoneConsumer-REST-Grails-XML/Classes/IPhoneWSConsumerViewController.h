@@ -35,6 +35,7 @@
 						:(NSString*) httpMethod;
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField;
+- (void) getInitialContestants;
 
 @property (retain) UIActivityIndicatorView *activityIndicator;
 @end
