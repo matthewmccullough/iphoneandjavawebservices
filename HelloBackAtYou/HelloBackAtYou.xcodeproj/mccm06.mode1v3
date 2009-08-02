@@ -296,7 +296,7 @@
 							<real>297</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>4 55 1396 823 0 0 1400 878 </string>
+						<string>44 55 1396 823 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -326,14 +326,14 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D53161B0101D28E50079EDE6</string>
+										<string>D58060C110260237005C1155</string>
 										<key>history</key>
 										<array>
 											<string>D5137A4B101B87FB002DFE0A</string>
 											<string>D5137A4C101B87FB002DFE0A</string>
 											<string>D5137A4E101B87FB002DFE0A</string>
 											<string>D531619C101D28E50079EDE6</string>
-											<string>D531619D101D28E50079EDE6</string>
+											<string>D5B349D2102601EA00CC531D</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -343,24 +343,6 @@
 											<string>D5137A54101B87FB002DFE0A</string>
 											<string>D5137A59101B87FB002DFE0A</string>
 											<string>D5137A5B101B87FB002DFE0A</string>
-											<string>D531619E101D28E50079EDE6</string>
-											<string>D531619F101D28E50079EDE6</string>
-											<string>D53161A0101D28E50079EDE6</string>
-											<string>D53161A1101D28E50079EDE6</string>
-											<string>D53161A2101D28E50079EDE6</string>
-											<string>D53161A3101D28E50079EDE6</string>
-											<string>D53161A4101D28E50079EDE6</string>
-											<string>D53161A5101D28E50079EDE6</string>
-											<string>D53161A6101D28E50079EDE6</string>
-											<string>D53161A7101D28E50079EDE6</string>
-											<string>D53161A8101D28E50079EDE6</string>
-											<string>D53161A9101D28E50079EDE6</string>
-											<string>D53161AA101D28E50079EDE6</string>
-											<string>D53161AB101D28E50079EDE6</string>
-											<string>D53161AC101D28E50079EDE6</string>
-											<string>D53161AD101D28E50079EDE6</string>
-											<string>D53161AE101D28E50079EDE6</string>
-											<string>D53161AF101D28E50079EDE6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -374,7 +356,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1077, 604}}</string>
 								<key>RubberWindowFrame</key>
-								<string>4 55 1396 823 0 0 1400 878 </string>
+								<string>44 55 1396 823 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -394,7 +376,7 @@
 								<key>Frame</key>
 								<string>{{0, 609}, {1077, 173}}</string>
 								<key>RubberWindowFrame</key>
-								<string>4 55 1396 823 0 0 1400 878 </string>
+								<string>44 55 1396 823 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -418,9 +400,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D53161B1101D28E50079EDE6</string>
+				<string>D58060AF102601F6005C1155</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D53161B2101D28E50079EDE6</string>
+				<string>D58060B0102601F6005C1155</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -554,13 +536,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>D5137A70101B87FB002DFE0A</string>
 		<string>/Users/mccm06/Documents/Teach/Courses/iPhone-and-Java-1Hour/examples/iphoneandjavawebservices_git/HelloBackAtYou/HelloBackAtYou.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>4 55 1396 823 0 0 1400 878 </string>
+	<string>44 55 1396 823 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

@@ -3,7 +3,7 @@
 	1D3623240D0F684500981E51 /* IPhoneWSConsumerAppDelegate.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {998, 635}}";
-			sepNavSelRange = "{408, 86}";
+			sepNavSelRange = "{372, 0}";
 			sepNavVisRange = "{0, 502}";
 		};
 	};
@@ -30,9 +30,9 @@
 	};
 	28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {998, 6099}}";
-			sepNavSelRange = "{10228, 0}";
-			sepNavVisRange = "{9023, 1214}";
+			sepNavIntBoundsRect = "{{0, 0}, {998, 5947}}";
+			sepNavSelRange = "{9975, 0}";
+			sepNavVisRange = "{1427, 1310}";
 			sepNavWindowFrame = "{{320, 184}, {947, 694}}";
 		};
 	};
@@ -49,8 +49,6 @@
 			D5BA98390FD381C300DF9458 /* IPhoneWSConsumerViewController.m:127 */,
 			D5BA983B0FD3821800DF9458 /* InitialContestantsXMLParser.m:93 */,
 			D53161C9101D2BFE0079EDE6 /* IPhoneWSConsumerViewController.m:82 */,
-			D53162FC101DF3FA0079EDE6 /* IPhoneWSConsumerViewController.m:53 */,
-			D531630B101DF54E0079EDE6 /* IPhoneWSConsumerViewController.m:305 */,
 		);
 		codeSenseManager = D5C8CFF10EC94062004E6B91 /* Code sense */;
 		executables = (
@@ -193,8 +191,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 270849030;
-			PBXWorkspaceStateSaveDate = 270849030;
+			PBXPerProjectTemplateStateSaveDate = 270926326;
+			PBXWorkspaceStateSaveDate = 270926326;
 		};
 		perUserProjectItems = {
 			D5006C880F6CEEA1005F6FDD = D5006C880F6CEEA1005F6FDD /* PBXTextBookmark */;
@@ -203,99 +201,30 @@
 			D5006C960F6CEEA1005F6FDD = D5006C960F6CEEA1005F6FDD /* PBXTextBookmark */;
 			D5006C970F6CEEA1005F6FDD = D5006C970F6CEEA1005F6FDD /* PBXTextBookmark */;
 			D5006C990F6CEEA1005F6FDD = D5006C990F6CEEA1005F6FDD /* PBXTextBookmark */;
-			D5046CC11024D40E0058A814 /* PBXTextBookmark */ = D5046CC11024D40E0058A814 /* PBXTextBookmark */;
-			D5046CC21024D40E0058A814 /* PBXTextBookmark */ = D5046CC21024D40E0058A814 /* PBXTextBookmark */;
-			D5046CC31024D40E0058A814 /* PBXTextBookmark */ = D5046CC31024D40E0058A814 /* PBXTextBookmark */;
-			D5046CC41024D40E0058A814 /* PBXTextBookmark */ = D5046CC41024D40E0058A814 /* PBXTextBookmark */;
-			D5137A2E101B8077002DFE0A = D5137A2E101B8077002DFE0A /* PBXTextBookmark */;
+			D5046CC11024D40E0058A814 = D5046CC11024D40E0058A814 /* PBXTextBookmark */;
+			D5046CD01026010F0058A814 = D5046CD01026010F0058A814 /* PBXTextBookmark */;
 			D52163C20F1D50FE00992DA9 = D52163C20F1D50FE00992DA9 /* PBXTextBookmark */;
 			D52CC1560F0DF96900D9FD15 = D52CC1560F0DF96900D9FD15 /* PBXTextBookmark */;
 			D53161CF101D2C010079EDE6 = D53161CF101D2C010079EDE6 /* PBXTextBookmark */;
-			D53161D2101D2C010079EDE6 = D53161D2101D2C010079EDE6 /* PBXTextBookmark */;
-			D53161D3101D2C010079EDE6 = D53161D3101D2C010079EDE6 /* PBXTextBookmark */;
-			D53161D4101D2C010079EDE6 = D53161D4101D2C010079EDE6 /* PBXTextBookmark */;
-			D53161D5101D2C010079EDE6 = D53161D5101D2C010079EDE6 /* PBXTextBookmark */;
-			D5316230101D5E7A0079EDE6 = D5316230101D5E7A0079EDE6 /* PBXTextBookmark */;
 			D5316231101D5E7A0079EDE6 = D5316231101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316232101D5E7A0079EDE6 = D5316232101D5E7A0079EDE6 /* PBXTextBookmark */;
 			D5316233101D5E7A0079EDE6 = D5316233101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316234101D5E7A0079EDE6 = D5316234101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316235101D5E7A0079EDE6 = D5316235101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316236101D5E7A0079EDE6 = D5316236101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316237101D5E7A0079EDE6 = D5316237101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316238101D5E7A0079EDE6 = D5316238101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316239101D5E7A0079EDE6 = D5316239101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D531623A101D5E7A0079EDE6 = D531623A101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D531623B101D5E7A0079EDE6 = D531623B101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D531623C101D5E7A0079EDE6 = D531623C101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D531623D101D5E7A0079EDE6 = D531623D101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D531623E101D5E7A0079EDE6 = D531623E101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D531623F101D5E7A0079EDE6 = D531623F101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316240101D5E7A0079EDE6 = D5316240101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316241101D5E7A0079EDE6 = D5316241101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316242101D5E7A0079EDE6 = D5316242101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316243101D5E7A0079EDE6 = D5316243101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316244101D5E7A0079EDE6 = D5316244101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316245101D5E7A0079EDE6 = D5316245101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316246101D5E7A0079EDE6 = D5316246101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316247101D5E7A0079EDE6 = D5316247101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316248101D5E7A0079EDE6 = D5316248101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316249101D5E7A0079EDE6 = D5316249101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D531624A101D5E7A0079EDE6 = D531624A101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D531624B101D5E7A0079EDE6 = D531624B101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D531624C101D5E7A0079EDE6 = D531624C101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D531624D101D5E7A0079EDE6 = D531624D101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D531624E101D5E7A0079EDE6 = D531624E101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D531624F101D5E7A0079EDE6 = D531624F101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316250101D5E7A0079EDE6 = D5316250101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316251101D5E7A0079EDE6 = D5316251101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316252101D5E7A0079EDE6 = D5316252101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316253101D5E7A0079EDE6 = D5316253101D5E7A0079EDE6 /* PBXTextBookmark */;
-			D5316254101D5E7A0079EDE6 = D5316254101D5E7A0079EDE6 /* PBXTextBookmark */;
 			D53162A7101D7F720079EDE6 = D53162A7101D7F720079EDE6 /* PBXTextBookmark */;
 			D53162A8101D7F720079EDE6 = D53162A8101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162AD101D7F720079EDE6 = D53162AD101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162AE101D7F720079EDE6 = D53162AE101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162AF101D7F720079EDE6 = D53162AF101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162B0101D7F720079EDE6 = D53162B0101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162B1101D7F720079EDE6 = D53162B1101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162B2101D7F720079EDE6 = D53162B2101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162B3101D7F720079EDE6 = D53162B3101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162B4101D7F720079EDE6 = D53162B4101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162B5101D7F720079EDE6 = D53162B5101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162B6101D7F720079EDE6 = D53162B6101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162B7101D7F720079EDE6 = D53162B7101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162B8101D7F720079EDE6 = D53162B8101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162B9101D7F720079EDE6 = D53162B9101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162BA101D7F720079EDE6 = D53162BA101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162BB101D7F720079EDE6 = D53162BB101D7F720079EDE6 /* PBXTextBookmark */;
-			D53162BC101D7F720079EDE6 = D53162BC101D7F720079EDE6 /* PBXTextBookmark */;
 			D53162C2101DECDE0079EDE6 = D53162C2101DECDE0079EDE6 /* PBXTextBookmark */;
-			D53162C4101DECDE0079EDE6 = D53162C4101DECDE0079EDE6 /* PBXTextBookmark */;
-			D53162C5101DECDE0079EDE6 = D53162C5101DECDE0079EDE6 /* PBXTextBookmark */;
-			D53162C6101DECDE0079EDE6 = D53162C6101DECDE0079EDE6 /* PBXTextBookmark */;
-			D53162C7101DECDE0079EDE6 = D53162C7101DECDE0079EDE6 /* PBXTextBookmark */;
-			D53162D1101DED7A0079EDE6 = D53162D1101DED7A0079EDE6 /* PBXTextBookmark */;
-			D53162F2101DF3B10079EDE6 = D53162F2101DF3B10079EDE6 /* PBXTextBookmark */;
-			D53162F3101DF3B10079EDE6 = D53162F3101DF3B10079EDE6 /* PBXTextBookmark */;
-			D53162F8101DF3C90079EDE6 = D53162F8101DF3C90079EDE6 /* PBXTextBookmark */;
-			D53162FF101DF41F0079EDE6 = D53162FF101DF41F0079EDE6 /* PBXTextBookmark */;
-			D5316304101DF43F0079EDE6 = D5316304101DF43F0079EDE6 /* PBXTextBookmark */;
-			D5316305101DF43F0079EDE6 = D5316305101DF43F0079EDE6 /* PBXTextBookmark */;
 			D531630C101DF5A10079EDE6 = D531630C101DF5A10079EDE6 /* PBXTextBookmark */;
 			D531630D101DF5A10079EDE6 = D531630D101DF5A10079EDE6 /* PBXTextBookmark */;
-			D531630E101DF5A10079EDE6 = D531630E101DF5A10079EDE6 /* PBXTextBookmark */;
-			D531630F101DF5A10079EDE6 = D531630F101DF5A10079EDE6 /* PBXTextBookmark */;
-			D5316310101DF5A10079EDE6 = D5316310101DF5A10079EDE6 /* PBXTextBookmark */;
-			D5316311101DF5A10079EDE6 = D5316311101DF5A10079EDE6 /* PBXTextBookmark */;
-			D5316312101DF5A10079EDE6 = D5316312101DF5A10079EDE6 /* PBXTextBookmark */;
-			D5316313101DF5A10079EDE6 = D5316313101DF5A10079EDE6 /* PBXTextBookmark */;
-			D5316314101DF5A10079EDE6 = D5316314101DF5A10079EDE6 /* PBXTextBookmark */;
-			D5316315101DF5A10079EDE6 = D5316315101DF5A10079EDE6 /* PBXTextBookmark */;
-			D5316316101DF5A10079EDE6 = D5316316101DF5A10079EDE6 /* PBXTextBookmark */;
-			D5316317101DF5A10079EDE6 = D5316317101DF5A10079EDE6 /* PBXTextBookmark */;
 			D55560D2100AC1480012CFB8 = D55560D2100AC1480012CFB8 /* PBXTextBookmark */;
 			D555613D100AD7850012CFB8 = D555613D100AD7850012CFB8 /* PBXTextBookmark */;
+			D58060BC102601FB005C1155 /* PBXTextBookmark */ = D58060BC102601FB005C1155 /* PBXTextBookmark */;
+			D58060C7102602C7005C1155 /* PBXTextBookmark */ = D58060C7102602C7005C1155 /* PBXTextBookmark */;
+			D58060C8102602C7005C1155 /* PBXTextBookmark */ = D58060C8102602C7005C1155 /* PBXTextBookmark */;
+			D58060C9102602C7005C1155 /* PBXTextBookmark */ = D58060C9102602C7005C1155 /* PBXTextBookmark */;
+			D58060CA102602C7005C1155 /* PBXTextBookmark */ = D58060CA102602C7005C1155 /* PBXTextBookmark */;
+			D58060CB102602C7005C1155 /* PBXTextBookmark */ = D58060CB102602C7005C1155 /* PBXTextBookmark */;
+			D58060CC102602C7005C1155 /* PBXTextBookmark */ = D58060CC102602C7005C1155 /* PBXTextBookmark */;
+			D58060CD102602C7005C1155 /* PBXTextBookmark */ = D58060CD102602C7005C1155 /* PBXTextBookmark */;
+			D58060CE102602C7005C1155 /* PBXTextBookmark */ = D58060CE102602C7005C1155 /* PBXTextBookmark */;
+			D58060CF102602C7005C1155 /* PBXTextBookmark */ = D58060CF102602C7005C1155 /* PBXTextBookmark */;
 			D58C585D0F6CC2D900A1977D = D58C585D0F6CC2D900A1977D /* PBXTextBookmark */;
 			D58C58610F6CC2D900A1977D = D58C58610F6CC2D900A1977D /* PBXTextBookmark */;
 			D58C593A0F6CD7F500A1977D = D58C593A0F6CD7F500A1977D /* PBXTextBookmark */;
@@ -308,6 +237,7 @@
 			D5A5BB700F6AEF6D00EEC2DC = D5A5BB700F6AEF6D00EEC2DC /* PBXTextBookmark */;
 			D5A5BC1A0F6B1E3100EEC2DC = D5A5BC1A0F6B1E3100EEC2DC /* PBXTextBookmark */;
 			D5A5BC1F0F6B1E3100EEC2DC = D5A5BC1F0F6B1E3100EEC2DC /* PBXTextBookmark */;
+			D5B349D3102601EA00CC531D = D5B349D3102601EA00CC531D /* PBXTextBookmark */;
 			D5C8D00A0EC9488E004E6B91 = D5C8D00A0EC9488E004E6B91 /* PBXTextBookmark */;
 			D5DBA1460F1D98270078F00E = D5DBA1460F1D98270078F00E /* PlistBookmark */;
 			D5DBA14C0F1D98270078F00E = D5DBA14C0F1D98270078F00E /* PlistBookmark */;
@@ -429,37 +359,7 @@
 		vrLen = 1214;
 		vrLoc = 9023;
 	};
-	D5046CC21024D40E0058A814 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623240D0F684500981E51 /* IPhoneWSConsumerAppDelegate.h */;
-		name = "IPhoneWSConsumerAppDelegate.h: 14";
-		rLen = 86;
-		rLoc = 408;
-		rType = 0;
-		vrLen = 502;
-		vrLoc = 0;
-	};
-	D5046CC31024D40E0058A814 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 311";
-		rLen = 0;
-		rLoc = 10228;
-		rType = 0;
-		vrLen = 1214;
-		vrLoc = 9023;
-	};
-	D5046CC41024D40E0058A814 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623240D0F684500981E51 /* IPhoneWSConsumerAppDelegate.h */;
-		name = "IPhoneWSConsumerAppDelegate.h: 14";
-		rLen = 86;
-		rLoc = 408;
-		rType = 0;
-		vrLen = 502;
-		vrLoc = 0;
-	};
-	D5137A2E101B8077002DFE0A /* PBXTextBookmark */ = {
+	D5046CD01026010F0058A814 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623240D0F684500981E51 /* IPhoneWSConsumerAppDelegate.h */;
 		name = "IPhoneWSConsumerAppDelegate.h: 14";
@@ -503,7 +403,7 @@
 		ignoreCount = 0;
 		lineNumber = 124;
 		location = IPhoneWSConsumer;
-		modificationTime = 270398598.015773;
+		modificationTime = 270926482.414166;
 		state = 2;
 	};
 	D53161C9101D2BFE0079EDE6 /* IPhoneWSConsumerViewController.m:82 */ = {
@@ -519,11 +419,11 @@
 		delayBeforeContinue = 0;
 		fileReference = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
 		functionName = "-addContestant:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 82;
 		location = IPhoneWSConsumer;
-		modificationTime = 270398653.316272;
+		modificationTime = 270926485.809789;
 		state = 1;
 	};
 	D53161CF101D2C010079EDE6 /* PBXTextBookmark */ = {
@@ -535,46 +435,6 @@
 		rType = 0;
 		vrLen = 630;
 		vrLoc = 0;
-	};
-	D53161D2101D2C010079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 89";
-		rLen = 41;
-		rLoc = 3106;
-		rType = 0;
-		vrLen = 1063;
-		vrLoc = 2241;
-	};
-	D53161D3101D2C010079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* IPhoneWSConsumerAppDelegate.m */;
-		name = "IPhoneWSConsumerAppDelegate.m: 10";
-		rLen = 14;
-		rLoc = 294;
-		rType = 0;
-		vrLen = 630;
-		vrLoc = 0;
-	};
-	D53161D4101D2C010079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 393";
-		rLen = 0;
-		rLoc = 10231;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 10237;
-	};
-	D53161D5101D2C010079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D58C59240F6CD62900A1977D /* InitialContestantsXMLParser.m */;
-		name = "InitialContestantsXMLParser.m: 100";
-		rLen = 17;
-		rLoc = 3049;
-		rType = 0;
-		vrLen = 1172;
-		vrLoc = 2138;
 	};
 	D53161DF101D2C010079EDE6 /* XCBreakpointLogAction */ = {
 		isa = XCBreakpointLogAction;
@@ -604,16 +464,6 @@
 			sepNavWindowFrame = "{{65, 859}, {927, 672}}";
 		};
 	};
-	D5316230101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 83";
-		rLen = 38;
-		rLoc = 2978;
-		rType = 0;
-		vrLen = 1004;
-		vrLoc = 2387;
-	};
 	D5316231101D5E7A0079EDE6 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
@@ -624,16 +474,6 @@
 		vrLen = 252;
 		vrLoc = 0;
 	};
-	D5316232101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 310";
-		rLen = 0;
-		rLoc = 10231;
-		rType = 0;
-		vrLen = 1301;
-		vrLoc = 8468;
-	};
 	D5316233101D5E7A0079EDE6 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
@@ -643,336 +483,6 @@
 		rType = 0;
 		vrLen = 868;
 		vrLoc = 2681;
-	};
-	D5316234101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
-		name = "IPhoneWSConsumerViewController.h: 45";
-		rLen = 0;
-		rLoc = 1338;
-		rType = 0;
-		vrLen = 1034;
-		vrLoc = 535;
-	};
-	D5316235101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 22";
-		rLen = 0;
-		rLoc = 815;
-		rType = 0;
-		vrLen = 1118;
-		vrLoc = 312;
-	};
-	D5316236101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 15";
-		rLen = 0;
-		rLoc = 372;
-		rType = 0;
-		vrLen = 884;
-		vrLoc = 0;
-	};
-	D5316237101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D58C59230F6CD62900A1977D /* InitialContestantsXMLParser.h */;
-		name = "InitialContestantsXMLParser.h: 26";
-		rLen = 0;
-		rLoc = 808;
-		rType = 0;
-		vrLen = 815;
-		vrLoc = 0;
-	};
-	D5316238101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
-		name = "IPhoneWSConsumerViewController.h: 29";
-		rLen = 0;
-		rLoc = 983;
-		rType = 0;
-		vrLen = 955;
-		vrLoc = 503;
-	};
-	D5316239101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 15";
-		rLen = 0;
-		rLoc = 372;
-		rType = 0;
-		vrLen = 884;
-		vrLoc = 0;
-	};
-	D531623A101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 17";
-		rLen = 0;
-		rLoc = 368;
-		rType = 0;
-		vrLen = 363;
-		vrLoc = 0;
-	};
-	D531623B101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
-		name = "IPhoneWSConsumerViewController.h: 14";
-		rLen = 0;
-		rLoc = 609;
-		rType = 0;
-		vrLen = 1175;
-		vrLoc = 157;
-	};
-	D531623C101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 12";
-		rLen = 0;
-		rLoc = 242;
-		rType = 0;
-		vrLen = 416;
-		vrLoc = 0;
-	};
-	D531623D101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 56";
-		rLen = 0;
-		rLoc = 2230;
-		rType = 0;
-		vrLen = 1212;
-		vrLoc = 1519;
-	};
-	D531623E101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
-		name = "IPhoneWSConsumerViewController.h: 16";
-		rLen = 41;
-		rLoc = 568;
-		rType = 0;
-		vrLen = 1173;
-		vrLoc = 0;
-	};
-	D531623F101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 231";
-		rLen = 0;
-		rLoc = 7934;
-		rType = 0;
-		vrLen = 757;
-		vrLoc = 6984;
-	};
-	D5316240101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
-		name = "IPhoneWSConsumerViewController.h: 37";
-		rLen = 0;
-		rLoc = 1133;
-		rType = 0;
-		vrLen = 1015;
-		vrLoc = 536;
-	};
-	D5316241101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 13";
-		rLen = 0;
-		rLoc = 366;
-		rType = 0;
-		vrLen = 389;
-		vrLoc = 0;
-	};
-	D5316242101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
-		name = "IPhoneWSConsumerViewController.h: 18";
-		rLen = 0;
-		rLoc = 609;
-		rType = 0;
-		vrLen = 1134;
-		vrLoc = 133;
-	};
-	D5316243101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 16";
-		rLen = 0;
-		rLoc = 368;
-		rType = 0;
-		vrLen = 334;
-		vrLoc = 0;
-	};
-	D5316244101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
-		name = "IPhoneWSConsumerViewController.h: 36";
-		rLen = 0;
-		rLoc = 1055;
-		rType = 0;
-		vrLen = 1120;
-		vrLoc = 443;
-	};
-	D5316245101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 13";
-		rLen = 0;
-		rLoc = 233;
-		rType = 0;
-		vrLen = 968;
-		vrLoc = 0;
-	};
-	D5316246101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D58C59240F6CD62900A1977D /* InitialContestantsXMLParser.m */;
-		name = "InitialContestantsXMLParser.m: 100";
-		rLen = 17;
-		rLoc = 3049;
-		rType = 0;
-		vrLen = 1261;
-		vrLoc = 2049;
-	};
-	D5316247101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 21";
-		rLen = 0;
-		rLoc = 815;
-		rType = 0;
-		vrLen = 1250;
-		vrLoc = 615;
-	};
-	D5316248101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 18";
-		rLen = 0;
-		rLoc = 372;
-		rType = 0;
-		vrLen = 912;
-		vrLoc = 0;
-	};
-	D5316249101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 21";
-		rLen = 0;
-		rLoc = 815;
-		rType = 0;
-		vrLen = 1297;
-		vrLoc = 615;
-	};
-	D531624A101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 15";
-		rLen = 0;
-		rLoc = 284;
-		rType = 0;
-		vrLen = 939;
-		vrLoc = 0;
-	};
-	D531624B101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
-		name = "IPhoneWSConsumerViewController.h: 30";
-		rLen = 0;
-		rLoc = 983;
-		rType = 0;
-		vrLen = 999;
-		vrLoc = 535;
-	};
-	D531624C101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 16";
-		rLen = 0;
-		rLoc = 366;
-		rType = 0;
-		vrLen = 436;
-		vrLoc = 0;
-	};
-	D531624D101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
-		name = "IPhoneWSConsumerViewController.h: 17";
-		rLen = 0;
-		rLoc = 609;
-		rType = 0;
-		vrLen = 1213;
-		vrLoc = 133;
-	};
-	D531624E101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 14";
-		rLen = 0;
-		rLoc = 271;
-		rType = 0;
-		vrLen = 463;
-		vrLoc = 0;
-	};
-	D531624F101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 21";
-		rLen = 0;
-		rLoc = 815;
-		rType = 0;
-		vrLen = 1323;
-		vrLoc = 70;
-	};
-	D5316250101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
-		name = "IPhoneWSConsumerViewController.h: 17";
-		rLen = 0;
-		rLoc = 609;
-		rType = 0;
-		vrLen = 1201;
-		vrLoc = 133;
-	};
-	D5316251101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 23";
-		rLen = 0;
-		rLoc = 368;
-		rType = 0;
-		vrLen = 505;
-		vrLoc = 0;
-	};
-	D5316252101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
-		name = "IPhoneWSConsumerViewController.h: 28";
-		rLen = 0;
-		rLoc = 1055;
-		rType = 0;
-		vrLen = 1066;
-		vrLoc = 342;
-	};
-	D5316253101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 21";
-		rLen = 0;
-		rLoc = 368;
-		rType = 0;
-		vrLen = 560;
-		vrLoc = 0;
-	};
-	D5316254101D5E7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 15";
-		rLen = 0;
-		rLoc = 284;
-		rType = 0;
-		vrLen = 939;
-		vrLoc = 0;
 	};
 	D53162A7101D7F720079EDE6 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -994,166 +504,6 @@
 		vrLen = 815;
 		vrLoc = 0;
 	};
-	D53162AD101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 10";
-		rLen = 0;
-		rLoc = 448;
-		rType = 0;
-		vrLen = 1206;
-		vrLoc = 0;
-	};
-	D53162AE101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 72";
-		rLen = 0;
-		rLoc = 2343;
-		rType = 0;
-		vrLen = 970;
-		vrLoc = 2240;
-	};
-	D53162AF101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D58C59240F6CD62900A1977D /* InitialContestantsXMLParser.m */;
-		name = "InitialContestantsXMLParser.m: 100";
-		rLen = 17;
-		rLoc = 3049;
-		rType = 0;
-		vrLen = 1261;
-		vrLoc = 2049;
-	};
-	D53162B0101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D58C59230F6CD62900A1977D /* InitialContestantsXMLParser.h */;
-		name = "InitialContestantsXMLParser.h: 26";
-		rLen = 0;
-		rLoc = 808;
-		rType = 0;
-		vrLen = 815;
-		vrLoc = 0;
-	};
-	D53162B1101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 27";
-		rLen = 0;
-		rLoc = 368;
-		rType = 0;
-		vrLen = 631;
-		vrLoc = 0;
-	};
-	D53162B2101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 141";
-		rLen = 35;
-		rLoc = 5022;
-		rType = 0;
-		vrLen = 867;
-		vrLoc = 4621;
-	};
-	D53162B3101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 17";
-		rLen = 0;
-		rLoc = 288;
-		rType = 0;
-		vrLen = 910;
-		vrLoc = 0;
-	};
-	D53162B4101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 31";
-		rLen = 0;
-		rLoc = 628;
-		rType = 0;
-		vrLen = 889;
-		vrLoc = 0;
-	};
-	D53162B5101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 17";
-		rLen = 0;
-		rLoc = 288;
-		rType = 0;
-		vrLen = 810;
-		vrLoc = 0;
-	};
-	D53162B6101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 12";
-		rLen = 0;
-		rLoc = 241;
-		rType = 0;
-		vrLen = 930;
-		vrLoc = 0;
-	};
-	D53162B7101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 141";
-		rLen = 35;
-		rLoc = 5022;
-		rType = 0;
-		vrLen = 1100;
-		vrLoc = 0;
-	};
-	D53162B8101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
-		name = "IPhoneWSConsumerViewController.h: 28";
-		rLen = 0;
-		rLoc = 1055;
-		rType = 0;
-		vrLen = 1147;
-		vrLoc = 132;
-	};
-	D53162B9101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 12";
-		rLen = 0;
-		rLoc = 241;
-		rType = 0;
-		vrLen = 930;
-		vrLoc = 0;
-	};
-	D53162BA101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 17";
-		rLen = 0;
-		rLoc = 288;
-		rType = 0;
-		vrLen = 806;
-		vrLoc = 0;
-	};
-	D53162BB101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 16";
-		rLen = 0;
-		rLoc = 303;
-		rType = 0;
-		vrLen = 614;
-		vrLoc = 0;
-	};
-	D53162BC101D7F720079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 104";
-		rLen = 0;
-		rLoc = 3206;
-		rType = 0;
-		vrLen = 835;
-		vrLoc = 2776;
-	};
 	D53162C2101DECDE0079EDE6 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
@@ -1163,150 +513,6 @@
 		rType = 0;
 		vrLen = 628;
 		vrLoc = 0;
-	};
-	D53162C4101DECDE0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 19";
-		rLen = 0;
-		rLoc = 350;
-		rType = 0;
-		vrLen = 616;
-		vrLoc = 0;
-	};
-	D53162C5101DECDE0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 141";
-		rLen = 35;
-		rLoc = 5022;
-		rType = 0;
-		vrLen = 1212;
-		vrLoc = 614;
-	};
-	D53162C6101DECDE0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 104";
-		rLen = 0;
-		rLoc = 3206;
-		rType = 0;
-		vrLen = 889;
-		vrLoc = 2722;
-	};
-	D53162C7101DECDE0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FA101D58C00079EDE6 /* WebServiceProcessor.h */;
-		name = "WebServiceProcessor.h: 28";
-		rLen = 0;
-		rLoc = 622;
-		rType = 0;
-		vrLen = 628;
-		vrLoc = 0;
-	};
-	D53162D1101DED7A0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 93";
-		rLen = 0;
-		rLoc = 2939;
-		rType = 0;
-		vrLen = 961;
-		vrLoc = 2658;
-	};
-	D53162F2101DF3B10079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 305";
-		rLen = 0;
-		rLoc = 10062;
-		rType = 0;
-		vrLen = 1196;
-		vrLoc = 8978;
-	};
-	D53162F3101DF3B10079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 99";
-		rLen = 0;
-		rLoc = 3053;
-		rType = 0;
-		vrLen = 1266;
-		vrLoc = 257;
-	};
-	D53162F8101DF3C90079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 304";
-		rLen = 0;
-		rLoc = 10058;
-		rType = 0;
-		vrLen = 1312;
-		vrLoc = 8707;
-	};
-	D53162FC101DF3FA0079EDE6 /* IPhoneWSConsumerViewController.m:53 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		functionName = "-getInitialContestantsSuccess";
-		hitCount = 1;
-		ignoreCount = 0;
-		lineNumber = 53;
-		location = IPhoneWSConsumer;
-		modificationTime = 270398606.468921;
-		state = 1;
-	};
-	D53162FF101DF41F0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 93";
-		rLen = 14;
-		rLoc = 2925;
-		rType = 0;
-		vrLen = 922;
-		vrLoc = 2376;
-	};
-	D5316304101DF43F0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 51";
-		rLen = 0;
-		rLoc = 1870;
-		rType = 0;
-		vrLen = 1312;
-		vrLoc = 8745;
-	};
-	D5316305101DF43F0079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 93";
-		rLen = 0;
-		rLoc = 2923;
-		rType = 0;
-		vrLen = 924;
-		vrLoc = 2697;
-	};
-	D531630B101DF54E0079EDE6 /* IPhoneWSConsumerViewController.m:305 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		functionName = "-initiateRESTCall:::";
-		hitCount = 0;
-		ignoreCount = 0;
-		lineNumber = 305;
-		location = IPhoneWSConsumer;
-		modificationTime = 270398798.175826;
-		state = 1;
 	};
 	D531630C101DF5A10079EDE6 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -1328,106 +534,6 @@
 		vrLen = 1218;
 		vrLoc = 0;
 	};
-	D531630E101DF5A10079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 53";
-		rLen = 0;
-		rLoc = 1908;
-		rType = 0;
-		vrLen = 1139;
-		vrLoc = 0;
-	};
-	D531630F101DF5A10079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 49";
-		rLen = 0;
-		rLoc = 1829;
-		rType = 0;
-		vrLen = 1284;
-		vrLoc = 1357;
-	};
-	D5316310101DF5A10079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 93";
-		rLen = 0;
-		rLoc = 2923;
-		rType = 0;
-		vrLen = 924;
-		vrLoc = 2697;
-	};
-	D5316311101DF5A10079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 53";
-		rLen = 0;
-		rLoc = 1908;
-		rType = 0;
-		vrLen = 1284;
-		vrLoc = 1357;
-	};
-	D5316312101DF5A10079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D53161FB101D58C00079EDE6 /* WebServiceProcessor.m */;
-		name = "WebServiceProcessor.m: 95";
-		rLen = 0;
-		rLoc = 2976;
-		rType = 0;
-		vrLen = 842;
-		vrLoc = 2785;
-	};
-	D5316313101DF5A10079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 53";
-		rLen = 0;
-		rLoc = 1908;
-		rType = 0;
-		vrLen = 1284;
-		vrLoc = 1357;
-	};
-	D5316314101DF5A10079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
-		name = "IPhoneWSConsumerViewController.h: 28";
-		rLen = 0;
-		rLoc = 1055;
-		rType = 0;
-		vrLen = 1146;
-		vrLoc = 132;
-	};
-	D5316315101DF5A10079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 53";
-		rLen = 0;
-		rLoc = 1908;
-		rType = 0;
-		vrLen = 1139;
-		vrLoc = 0;
-	};
-	D5316316101DF5A10079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
-		name = "IPhoneWSConsumerViewController.h: 7";
-		rLen = 0;
-		rLoc = 280;
-		rType = 0;
-		vrLen = 1218;
-		vrLoc = 0;
-	};
-	D5316317101DF5A10079EDE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
-		name = "IPhoneWSConsumerViewController.m: 311";
-		rLen = 0;
-		rLoc = 10228;
-		rType = 0;
-		vrLen = 1109;
-		vrLoc = 9128;
-	};
 	D55560D2100AC1480012CFB8 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
@@ -1447,6 +553,103 @@
 		rType = 0;
 		vrLen = 969;
 		vrLoc = 0;
+	};
+	D58060BC102601FB005C1155 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* IPhoneWSConsumerAppDelegate.h */;
+		name = "IPhoneWSConsumerAppDelegate.h: 14";
+		rLen = 86;
+		rLoc = 408;
+		rType = 0;
+		vrLen = 502;
+		vrLoc = 0;
+	};
+	D58060C7102602C7005C1155 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* IPhoneWSConsumerAppDelegate.h */;
+		name = "IPhoneWSConsumerAppDelegate.h: 13";
+		rLen = 0;
+		rLoc = 372;
+		rType = 0;
+		vrLen = 502;
+		vrLoc = 0;
+	};
+	D58060C8102602C7005C1155 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* IPhoneWSConsumerAppDelegate.m */;
+		name = "IPhoneWSConsumerAppDelegate.m: 10";
+		rLen = 14;
+		rLoc = 294;
+		rType = 0;
+		vrLen = 630;
+		vrLoc = 0;
+	};
+	D58060C9102602C7005C1155 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
+		name = "IPhoneWSConsumerViewController.h: 7";
+		rLen = 0;
+		rLoc = 280;
+		rType = 0;
+		vrLen = 1218;
+		vrLoc = 0;
+	};
+	D58060CA102602C7005C1155 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
+		rLen = 0;
+		rLoc = 304;
+		rType = 1;
+	};
+	D58060CB102602C7005C1155 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* IPhoneWSConsumerAppDelegate.h */;
+		name = "IPhoneWSConsumerAppDelegate.h: 13";
+		rLen = 0;
+		rLoc = 372;
+		rType = 0;
+		vrLen = 502;
+		vrLoc = 0;
+	};
+	D58060CC102602C7005C1155 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* IPhoneWSConsumerAppDelegate.m */;
+		name = "IPhoneWSConsumerAppDelegate.m: 10";
+		rLen = 14;
+		rLoc = 294;
+		rType = 0;
+		vrLen = 630;
+		vrLoc = 0;
+	};
+	D58060CD102602C7005C1155 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
+		name = "IPhoneWSConsumerViewController.m: 311";
+		rLen = 0;
+		rLoc = 10228;
+		rType = 0;
+		vrLen = 1214;
+		vrLoc = 9023;
+	};
+	D58060CE102602C7005C1155 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* IPhoneWSConsumerViewController.h */;
+		name = "IPhoneWSConsumerViewController.h: 7";
+		rLen = 0;
+		rLoc = 280;
+		rType = 0;
+		vrLen = 1218;
+		vrLoc = 0;
+	};
+	D58060CF102602C7005C1155 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* IPhoneWSConsumerViewController.m */;
+		name = "IPhoneWSConsumerViewController.m: 305";
+		rLen = 0;
+		rLoc = 9975;
+		rType = 0;
+		vrLen = 1310;
+		vrLoc = 1427;
 	};
 	D58C585D0F6CC2D900A1977D /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -1626,6 +829,16 @@
 		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator2.2.sdk/System/Library/Frameworks/Foundation.framework/Versions/C/Headers/NSURLConnection.h;
 		sourceTree = "<absolute>";
 	};
+	D5B349D3102601EA00CC531D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* IPhoneWSConsumerAppDelegate.h */;
+		name = "IPhoneWSConsumerAppDelegate.h: 14";
+		rLen = 86;
+		rLoc = 408;
+		rType = 0;
+		vrLen = 502;
+		vrLoc = 0;
+	};
 	D5BA98390FD381C300DF9458 /* IPhoneWSConsumerViewController.m:127 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -1640,7 +853,7 @@
 		ignoreCount = 0;
 		lineNumber = 127;
 		location = IPhoneWSConsumer;
-		modificationTime = 270398598.015806;
+		modificationTime = 270926482.414177;
 		state = 2;
 	};
 	D5BA983B0FD3821800DF9458 /* InitialContestantsXMLParser.m:93 */ = {
@@ -1657,7 +870,7 @@
 		ignoreCount = 0;
 		lineNumber = 93;
 		location = IPhoneWSConsumer;
-		modificationTime = 270398598.015929;
+		modificationTime = 270926482.414182;
 		state = 2;
 	};
 	D5C8CFE40EC9405D004E6B91 /* IPhoneWSConsumer */ = {
