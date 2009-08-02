@@ -1,13 +1,4 @@
-//
-//  WebServiceProcessor.m
-//  IPhoneWSConsumer
-//
-//  Created by Matthew McCullough on 7/26/09.
-//  Copyright 2009 Ambient Ideas, LLC. All rights reserved.
-//
-
 #import "WebServiceProcessor.h"
-
 
 @implementation WebServiceProcessor
 

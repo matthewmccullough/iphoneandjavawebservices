@@ -22,8 +22,9 @@
 
 @synthesize webServiceProcessor;
 
-//TODO: Make this not global, but owned by the interface
-NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/contestantRESTList/";
+static NSString * const CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/contestantRESTList/";
+static NSString * const ADD_CONTESTANT_WEBSERVICE_URL = @"http://localhost:8080/restgrails/contestantREST/?name=";
+static NSString * const RANDOM_CONTESTANT_WEBSERVICE_URL = @"http://localhost:8080/restgrails/contestantRESTRandom";
 
 /**
  * When the application is launched, get all the contestants from the web service
@@ -98,8 +99,7 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 	//Register the success callback method
 	webServiceProcessor.successSelector = @selector(addContestantSuccess);
 	
-	//TODO: Extract this to a interface variable for the web service URL
-	NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@", @"http://localhost:8080/restgrails/contestantREST/?name=", txtContestantName.text];
+	NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@", ADD_CONTESTANT_WEBSERVICE_URL, txtContestantName.text];
 	[self initiateRESTCall:nil :urlString :@"POST"];
 	
 	[urlString release];
@@ -154,7 +154,7 @@ NSString *CONTESTANT_LIST_WEBSERVICE_URL = @"http://localhost:8080/restgrails/co
 	webServiceProcessor.successSelector = @selector(pickWinnerRESTSuccess);
 	//TODO: Extract this web service URL to an instance constant
 	[self initiateRESTCall:nil
-						  :@"http://localhost:8080/restgrails/contestantRESTRandom"
+						  :RANDOM_CONTESTANT_WEBSERVICE_URL
 						  :@"GET"];
 }
 

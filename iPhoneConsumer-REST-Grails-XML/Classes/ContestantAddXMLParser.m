@@ -15,7 +15,7 @@
 @synthesize soapTagData;
 @synthesize xmlParser;
 
-BOOL recordThisTag = FALSE;
+static BOOL recordThisTag = FALSE;
 
 
 /**

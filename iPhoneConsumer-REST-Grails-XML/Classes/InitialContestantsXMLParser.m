@@ -16,7 +16,7 @@
 @synthesize nameFoundSelector;
 @synthesize parentController;
 
-BOOL recordThisTag2 = FALSE;
+static BOOL recordThisTag = FALSE;
 
 /**
  * 1) Accept a raw block of web service data
@@ -64,7 +64,7 @@ BOOL recordThisTag2 = FALSE;
 		
 		//Signal to foundCharacters that we are interested in recording the 
 		//data that it will receive.
-		recordThisTag2 = TRUE;
+		recordThisTag = TRUE;
 	}
 }
 
@@ -77,7 +77,7 @@ BOOL recordThisTag2 = FALSE;
  */
 -(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
-	if( recordThisTag2 )
+	if( recordThisTag )
 	{
 		//Append the data 
 		[soapTagData appendString: string];
@@ -101,7 +101,7 @@ BOOL recordThisTag2 = FALSE;
 		
 		//Since we are done with the name tag, we'll say we aren't interested in recording
 		//any more data from foundCharacters until we see another name tag in the didStartElement.
-		recordThisTag2 = FALSE;
+		recordThisTag = FALSE;
 	}
 }
 
