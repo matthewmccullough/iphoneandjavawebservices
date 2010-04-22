@@ -182,6 +182,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew McCullough (7V252G2VX5)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -189,6 +190,7 @@
 				GCC_PREFIX_HEADER = HelloBackAtYou_Prefix.pch;
 				INFOPLIST_FILE = "HelloBackAtYou-Info.plist";
 				PRODUCT_NAME = HelloBackAtYou;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B3F6A2A2-27F0-4DB5-B8E6-25353912681F";
 			};
 			name = Debug;
 		};
@@ -196,6 +198,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Matthew McCullough";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HelloBackAtYou_Prefix.pch;
